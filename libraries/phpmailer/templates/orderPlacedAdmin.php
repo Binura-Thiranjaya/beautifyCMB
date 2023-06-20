@@ -1,0 +1,1 @@
+<p>New Order Recieved please check the admin dashboard <?=$orderID;?></p>
