@@ -39,7 +39,7 @@
                 <p>The best interior designer created echo-friendly furniture for your dream home, visit all creative products</p>
               </div>
               <div class="btn-style4">
-                <a href="shop-left-sidebar.html" class="btn">
+                <a href="index.php" class="btn">
                   <span class="corner-wrap left-top">
                     <span class="corner"></span>
                   </span>

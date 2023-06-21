@@ -57,42 +57,42 @@
 
                     <div class="row g-0 option-wrap">
                       <div class="col-sm-6 col-xl-4">
-                        <a href="javascript:void(0)" data-class="orders" class="tab-box">
+                        <a href="my-orders.php" data-class="orders" class="tab-box">
                           <img src="https://www.svgrepo.com/show/383784/online-delivery.svg" alt="shopping bag" />
                           <h5>Orders</h5>
                           <p>See order history of previous orders</p>
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="wishlist.html" data-class="wishlist" class="tab-box">
+                        <a href="cart.php" data-class="wishlist" class="tab-box">
                           <img src="https://www.svgrepo.com/show/506106/cart-4.svg" alt="wishlist" />
                           <h5>Cart</h5>
                           <p>Checkout your cart before the stock ends.</p>
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="javascript:void(0)" data-class="savedAddress" class="tab-box">
+                        <a href="my-address.php" data-class="savedAddress" class="tab-box">
                           <img src="https://www.svgrepo.com/show/501804/address-book.svg" alt="address" />
                           <h5>Delivery Address</h5>
                           <p>Always check your address before put an order</p>
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="javascript:void(0)" data-class="payment" class="tab-box">
+                        <a href="my-payments.php" data-class="payment" class="tab-box">
                           <img src="https://www.svgrepo.com/show/392675/check-payments-currency-finance-money-payment.svg" alt="payment" />
                           <h5>Payment</h5>
                           <p>Check your payments, if you have unpaid invoices you can pay it from here</p>
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="javascript:void(0)" data-class="profile" class="tab-box">
+                        <a href="my-profile.php" data-class="profile" class="tab-box">
                           <img src="https://www.svgrepo.com/show/497407/profile-circle.svg" alt="profile" />
                           <h5>Profile</h5>
                           <p>Profile of <?=getUserData('user_FirstName');?> <?=getUserData('user_LastName');?></p>
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="javascript:void(0)" data-class="security" class="tab-box">
+                        <a href="my-passwordChange.php" data-class="security" class="tab-box">
                           <img src="https://www.svgrepo.com/show/497496/security-safe.svg" alt="security" />
                           <h5>Security</h5>
                           <p>Please don't share any one your email or password, If it leaked change it asap</p>

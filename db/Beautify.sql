@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 13, 2023 at 07:51 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Host: localhost
+-- Generation Time: Jun 20, 2023 at 06:14 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nga`
+-- Database: `Beautify`
 --
 
 -- --------------------------------------------------------
@@ -38,8 +38,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `cat`, `cat_name`) VALUES
-(1, 'petceylon', 'PET-CEYLON'),
-(2, 'secretsein', 'SECRET-SEIN');
+(1, 'mens', 'Mens'),
+(2, 'ladies', 'Ladies');
 
 -- --------------------------------------------------------
 
@@ -136,7 +136,10 @@ INSERT INTO `orders` (`id`, `order_id`, `order_by`, `order_on`, `order_status`, 
 (6, 'ORDER6419bf1cb3121', 'Ganidu640594252de66', '2023-03-21 19:58', '1', '2', '************1292', 'TEST12', 'none', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"dw42q1e\",\"name\":\"Petceylone Product #2\",\"price\":\"3000\",\"quantity\":\"5\"}]', '15000', '15000', '0', '5000'),
 (8, 'ORDER64295c7ea0870', 'Ganidu640594252de66', '2023-04-02 16:14', '1', '2', '1292', 'test12', 'Test delivery Note', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"dw42q1e\",\"name\":\"Petceylone Product #2\",\"price\":\"3000\",\"quantity\":\"1\"}]', '3000', '90', '1', '2910'),
 (9, 'ORDER64295eac5b0be', 'Ganidu640594252de66', '2023-04-02 16:23', '0', '0', 'none', 'test12', 'none', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"dw42q1e\",\"name\":\"Petceylone Product #2\",\"price\":\"3000\",\"quantity\":\"1\"},{\"id\":\"xc34v5rtb6gy7unda\",\"name\":\"Petceylone Product #1\",\"price\":\"1500\",\"quantity\":\"1\"}]', '4500', '135', '1', '4365'),
-(10, 'ORDER6488aa07620f1', 'Ganidu640594252de66', '2023-06-13 23:10', '0', '0', 'none', '0', 'none', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"748165daw846tyd\",\"name\":\"Pet Ceylon conditioning shampoo SHINER\",\"price\":\"800\",\"quantity\":\"1\"}]', '800', '0', '0', '1150');
+(10, 'ORDER6488aa07620f1', 'Ganidu640594252de66', '2023-06-13 23:10', '0', '0', 'none', '0', 'none', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"748165daw846tyd\",\"name\":\"Pet Ceylon conditioning shampoo SHINER\",\"price\":\"800\",\"quantity\":\"1\"}]', '800', '0', '0', '1150'),
+(11, 'ORDER648c7f3b98e3e', 'Binura648c7e512a61b', '2023-06-16 20:56', '0', '0', 'none', '0', 'none', '165/1 Weliweriya West, Weliweriya', '11710', '[{\"id\":\"748165daw846fwa\",\"name\":\"Pet Ceylon conditioning shampoo BLUE\",\"price\":\"595\",\"quantity\":\"3\"}]', '1785', '0', '0', '2135'),
+(12, 'ORDER648c7f66b02bb', 'Binura648c7e512a61b', '2023-06-16 20:57', '0', '0', 'none', '0', 'none', '165/1 Weliweriya West, Weliweriya', '11710', '[{\"id\":\"748165daw846fwa\",\"name\":\"Pet Ceylon conditioning shampoo BLUE\",\"price\":\"595\",\"quantity\":\"1\"}]', '595', '0', '0', '945'),
+(13, 'ORDER648c89735aa08', 'Binura648c7e512a61b', '2023-06-16 21:40', '0', '0', 'none', '0', 'none', '165/1 Weliweriya West, Weliweriya', '11710', '[{\"id\":\"748165daw846fwa\",\"name\":\"Pet Ceylon conditioning shampoo BLUE\",\"price\":\"595\",\"quantity\":\"2\"}]', '1190', '0', '0', '1540');
 
 -- --------------------------------------------------------
 
@@ -187,10 +190,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `product_uniqueID`, `product_category`, `product_name`, `product_price`, `product_description`, `product_stock`) VALUES
-(1, '748165daw84652q', 'petceylon', 'Pet Ceylon conditioning shampoo BERRY', '595', 'Size : 200ml', '10'),
-(3, '748165daw846fwa', 'petceylon', 'Pet Ceylon conditioning shampoo BLUE', '595', 'Size : 200ml', '10'),
-(4, '748165daw846tyd', 'petceylon', 'Pet Ceylon conditioning shampoo SHINER', '800', 'Size : 200ml', '9'),
-(5, '748165daw8466g7', 'petceylon', 'Pet Ceylon calamine powder (anti-itching) ', '646', 'Size : 200ml', '10');
+(1, '748165daw84652q', 'mens', 'Pet Ceylon conditioning shampoo BERRY', '595', 'Size : 200ml', '10'),
+(3, '748165daw846fwa', 'mes', 'Pet Ceylon conditioning shampoo BLUE', '595', 'Size : 200ml', '4'),
+(4, '748165daw846tyd', 'mens', 'Pet Ceylon conditioning shampoo SHINER', '800', 'Size : 200ml', '9'),
+(5, '748165daw8466g7', 'ladies', 'Pet Ceylon calamine powder (anti-itching) ', '646', 'Size : 200ml', '10');
 
 -- --------------------------------------------------------
 
@@ -244,7 +247,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_uniqueID`, `user_FirstName`, `user_LastName`, `user_Email`, `user_Password`, `user_Address`, `user_Mobile`, `user_Country`, `user_ZipCode`, `user_LastLogin`, `user_LastLoginIP`) VALUES
-(4, 'Ganidu640594252de66', 'Ganidu', 'Sathishka', 'ganidu49@gmail.com', '$2y$10$VJA60g5mu4pTrnhDTiFIAu0oifbNZRpn8gaodPwMw/WnEP5F9WlUO', '630/3 Vilahena Road, Pamunuwila, Gonawala', '0757856219', 'SRI-LANKA', '11600', '2023-03-06 12:50', '127.0.0.1');
+(4, 'Ganidu640594252de66', 'admin', 'admin', 'admin@gmail.com', '123', '630/3 Vilahena Road, Pamunuwila, Gonawala', '0757856219', 'SRI-LANKA', '11600', '2023-03-06 12:50', '127.0.0.1'),
+(5, 'Binura648c7e512a61b', 'Binura', 'Thiranjaya', 'binurathiranjaya@gmail.com', '$2y$10$LYu0kmIjI1DSMBbNCIUE5etTx345ouUQOFRub/Y2KHw63iekcKeaG', '165/1 Weliweriya West, Weliweriya', '0719982906', 'SRI-LANKA', '11710', '2023-06-16 20:52', '::1');
 
 --
 -- Indexes for dumped tables
@@ -336,7 +340,7 @@ ALTER TABLE `discounts`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `payments_history`
@@ -360,7 +364,7 @@ ALTER TABLE `product_images`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
