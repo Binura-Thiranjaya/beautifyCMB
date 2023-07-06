@@ -11129,6 +11129,10 @@ h6 {
     line-height: 20px;
     padding: 13px 47px;
 }
+.menu-right.contact-box .side-box a
+{
+    color: white !important;
+}
 .header3 .nav-wrap .menu-right .icon-menu {
     gap: 0
 }
