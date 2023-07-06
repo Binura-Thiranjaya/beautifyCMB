@@ -1,5 +1,5 @@
 :root {
-    --theme-color: #0f8fac
+    --theme-color-alpha: #00A6CA;
 }
 
 .theme-color2 {
@@ -380,7 +380,7 @@ body {
 }
 
 ::-moz-selection {
-    background-color: rgba(var(--theme-color), 0.1);
+    background-color: rgba(var(--theme-color-alpha), 0.1);
     color: #000000;
     text-shadow: none
 }
@@ -448,7 +448,7 @@ input[type="number"]::-color-ebkit-inner-spin-button {
 .loader-wrapper .loader span {
     font-size: calc(45px + (60 - 45) * ((100vw - 320px) / (1920 - 320)));
     font-family: "Montserrat", sans-serif;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-weight: 500;
     opacity: 0;
     -webkit-transition: all, 550ms;
@@ -630,7 +630,7 @@ section,
 
 .plus-minus input {
     background-color: #fff;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     border: none;
     font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
     outline: none;
@@ -807,11 +807,11 @@ section,
 }
 
 .bg-theme-green-label {
-    background-color: #2cc25e !important
+    background-color: #00A6CA !important
 }
 
 .border-color-green-label {
-    border-color: #23984a !important
+    border-color: #00A6CA !important
 }
 
 .bg-theme-p-side-1 {
@@ -863,7 +863,7 @@ section,
 }
 
 .bg-theme-theme {
-    background-color: var(--theme-color) !important
+    background-color: var(--theme-color-alpha) !important
 }
 
 .bg-transparent {
@@ -887,7 +887,7 @@ section,
 }
 
 .color-theme {
-    color: var(--theme-color) !important
+    color: var(--theme-color-alpha) !important
 }
 
 .arrow-label-wrap {
@@ -934,13 +934,13 @@ section,
 }
 
 .arrow-label-wrap .arrow-label.bg-theme-theme::after {
-    border-color: var(--theme-color);
+    border-color: var(--theme-color-alpha);
     border-right-color: transparent
 }
 
 [dir="rtl"] .arrow-label-wrap .arrow-label.bg-theme-theme::after {
     border-left-color: transparent;
-    border-right-color: var(--theme-color)
+    border-right-color: var(--theme-color-alpha)
 }
 
 .swiper-wrapper {
@@ -960,7 +960,7 @@ section,
     bottom: -10px;
     width: 50px;
     height: 2px;
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 [dir="rtl"] .line-style::before {
@@ -1045,7 +1045,7 @@ section,
 }
 
 .size-list li.active {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff
 }
 
@@ -1103,14 +1103,14 @@ section,
 
 .badges.badges-outline {
     background-color: #fff;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     border: 1px solid currentColor
 }
 
 .badges.badges-theme {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff;
-    border: 1px solid var(--theme-color)
+    border: 1px solid var(--theme-color-alpha)
 }
 
 [class="dark"] .badges.badges-theme {
@@ -1189,7 +1189,7 @@ section,
 }
 
 .search-box input:focus {
-    border-color: var(--theme-color);
+    border-color: var(--theme-color-alpha);
     color: #262834
 }
 
@@ -1272,7 +1272,7 @@ section,
 }
 
 .search-box.reverse .search svg {
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .sticky {
@@ -1364,7 +1364,7 @@ section,
     -ms-flex-align: center;
     align-items: center;
     gap: 8px;
-    border: 1px solid var(--theme-color);
+    border: 1px solid var(--theme-color-alpha);
     border-radius: 5px 15px 5px 15px;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
@@ -1395,14 +1395,14 @@ section,
 .theme-controller .btnTheme svg {
     width: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
     height: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .theme-controller .color-picker {
     background: none;
     overflow: hidden;
     margin-bottom: 0;
-    border: 1px solid var(--theme-color);
+    border: 1px solid var(--theme-color-alpha);
     border-radius: 5px 15px 5px 15px;
     padding: 8px 15px;
     background-color: #fff
@@ -1465,8 +1465,8 @@ section,
     width: 100%;
     height: 100%;
     border: 1px solid transparent;
-    border-bottom-color: var(--theme-color);
-    border-right: 1px solid var(--theme-color);
+    border-bottom-color: var(--theme-color-alpha);
+    border-right: 1px solid var(--theme-color-alpha);
     position: absolute;
     inset: 0;
     display: inline-block;
@@ -1520,7 +1520,7 @@ section,
 .dark-bodered-box .bordered-content,
 .dark-bodered-box2 .bordered-content {
     position: relative;
-    border: 1px solid var(--theme-color);
+    border: 1px solid var(--theme-color-alpha);
     padding: calc(0px + (18 - 0) * ((100vw - 320px) / (1920 - 320)));
     height: 100%;
     display: -webkit-box;
@@ -1597,7 +1597,7 @@ section,
 .dark-bodered-box2 .bordered-content h6 {
     font-weight: 500;
     font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     line-height: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
     margin-top: 2px
 }
@@ -1709,7 +1709,7 @@ section,
 .dark-bodered-box2 .bordered-content .line-span-wrap .line-span::after,
 .dark-bodered-box2 .bordered-content .line-span-wrap .line-span::before {
     content: "";
-    background-color: var(--theme-color2);
+    background-color: var(--theme-color-alpha2);
     position: absolute
 }
 
@@ -1944,7 +1944,7 @@ section,
     width: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
     height: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
     border-radius: 100%;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     border: 1px solid transparent
@@ -1967,17 +1967,17 @@ section,
     box-shadow: 0 0 5px rgba(38, 40, 52, 0.2);
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     background-color: #fff;
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .tap-to-top-box .tap-to-top-button:hover svg {
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 [class="dark"] .tap-to-top-box .tap-to-top-button:hover svg {
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .wow-section-overflow {
@@ -2094,11 +2094,11 @@ h6 {
 }
 
 .theme-color {
-    color: var(--theme-color) !important
+    color: var(--theme-color-alpha) !important
 }
 
 .theme-bg-color {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .content-color {
@@ -2228,19 +2228,19 @@ h6 {
     padding: 10px calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 500;
-    border-left: 3px solid var(--theme-color) !important;
+    border-left: 3px solid var(--theme-color-alpha) !important;
     border-radius: 0;
     background-color: #fafafa
 }
 
 [dir="rtl"] .accordian-style2 .accordion-item .accordion-button {
-    border-right: 3px solid var(--theme-color) !important;
+    border-right: 3px solid var(--theme-color-alpha) !important;
     border-left: 1px solid rgba(221, 221, 221, 0.5) !important;
     text-align: right
 }
 
 .accordian-style2 .accordion-item .accordion-button::after {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     padding: 12px;
     background-position: center;
     border-radius: 4px
@@ -2248,13 +2248,13 @@ h6 {
 
 .accordian-style2 .accordion-item .accordion-button:focus,
 .accordian-style2 .accordion-item .accordion-button:hover {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .accordian-style2 .accordion-item .accordion-button:not(.collapsed),
 .accordian-style2 .accordion-item .accordion-button:focus {
     border: 1px solid rgba(221, 221, 221, 0.5);
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .accordian-style2 .accordion-item .accordion-button:not(.collapsed)::after,
@@ -2307,7 +2307,7 @@ h6 {
     font-weight: 500;
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: 23px;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(18px + (50 - 18) * ((100vw - 320px) / (1920 - 320)));
     color: #fff !important;
     display: -webkit-inline-box;
@@ -2463,13 +2463,13 @@ h6 {
 .btn-solid2.btn-outline:hover,
 .btn-solid2.btn-special:hover {
     background-color: white;
-    color: var(--theme-color) !important;
-    border-color: var(--theme-color)
+    color: var(--theme-color-alpha) !important;
+    border-color: var(--theme-color-alpha)
 }
 
 .btn-solid.btn-solid2.btn-outline:hover,
 .btn-solid2.btn-outline:hover {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff !important
 }
 
@@ -2477,31 +2477,31 @@ h6 {
 .btn-outline1.btn-outline,
 .btn-outline1.btn-special {
     background-color: #fff;
-    color: var(--theme-color) !important;
-    border: 1px solid var(--theme-color)
+    color: var(--theme-color-alpha) !important;
+    border: 1px solid var(--theme-color-alpha)
 }
 
 .btn-solid.btn-outline1 .arrow,
 .btn-outline1.btn-outline .arrow,
 .btn-outline1.btn-special .arrow {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .btn-solid.btn-outline1::after,
 .btn-outline1.btn-outline::after,
 .btn-outline1.btn-special::after {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     bottom: -7px
 }
 
 .btn-outline {
-    border: 1px solid var(--theme-color);
+    border: 1px solid var(--theme-color-alpha);
     background-color: #fff;
-    color: var(--theme-color) !important
+    color: var(--theme-color-alpha) !important
 }
 
 .btn-outline .arrow {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     -webkit-transition: all 0.2s;
     transition: all 0.2s
 }
@@ -2515,12 +2515,12 @@ h6 {
 }
 
 .btn-outline:hover {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff !important
 }
 
 .btn-outline:hover.dark-btn {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .btn-outline:hover .arrow {
@@ -2644,12 +2644,12 @@ h6 {
 
 .btn-style2.bg-white {
     background-color: rgba(255, 255, 255, 0.9);
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     border-color: #fff
 }
 
 .btn-style2.btn-theme {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff
 }
 
@@ -2800,13 +2800,13 @@ h6 {
 }
 
 .btn-style4.btn-theme .btn {
-    background-color: var(--theme-color);
-    border-color: var(--theme-color)
+    background-color: var(--theme-color-alpha);
+    border-color: var(--theme-color-alpha)
 }
 
 .btn-style4.btn-theme .corner {
-    border-bottom-color: var(--theme-color);
-    border-right-color: var(--theme-color)
+    border-bottom-color: var(--theme-color-alpha);
+    border-right-color: var(--theme-color-alpha)
 }
 
 .btn-style4.btn-theme:hover .btn {
@@ -2822,20 +2822,20 @@ h6 {
     align-items: center;
     gap: 8px;
     font-size: 15px;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-weight: 500
 }
 
 .read-btn svg {
     width: 18px;
     height: 18px;
-    stroke: var(--theme-color);
+    stroke: var(--theme-color-alpha);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease
 }
 
 .read-btn:hover {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .read-btn:hover svg {
@@ -2857,7 +2857,7 @@ h6 {
     font-weight: 500;
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(20px + (23 - 20) * ((100vw - 320px) / (1920 - 320)));
-    background-color: var(--theme-color2);
+    background-color: var(--theme-color-alpha2);
     border-radius: 0;
     position: relative;
     z-index: 2
@@ -3172,11 +3172,11 @@ h6 {
 }
 
 .breadcrumb-wrap .banner .breadcrumb li.current a {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .breadcrumb-wrap .banner .breadcrumb li a:hover {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .progtrckr {
@@ -3257,14 +3257,14 @@ h6 {
 
 .progtrckr li.progtrckr-done {
     color: #000;
-    border-top: 4px solid var(--theme-color);
+    border-top: 4px solid var(--theme-color-alpha);
     width: 100% !important
 }
 
 .progtrckr li.progtrckr-done:before {
     content: "";
-    background-color: var(--theme-color);
-    border-color: var(--theme-color)
+    background-color: var(--theme-color-alpha);
+    border-color: var(--theme-color-alpha)
 }
 
 .progtrckr li.progtrckr-done h6 {
@@ -3341,7 +3341,7 @@ h6 {
 }
 
 .dropdown .onhover-show-div li:hover a {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .dropdown .onhover-show-div li+li {
@@ -3374,7 +3374,7 @@ h6 {
 }
 
 .select-dropdown .onhover-show-div li:hover {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     -webkit-transform: translateX(5px);
     transform: translateX(5px)
 }
@@ -3475,7 +3475,7 @@ h6 {
     }
     .shopingbag .onhover-show-div .dropdown-header .control {
         margin: -14px -14px 14px -14px;
-        background-color: var(--theme-color);
+        background-color: var(--theme-color-alpha);
         position: relative;
         z-index: 3;
         display: -webkit-box;
@@ -3556,7 +3556,7 @@ h6 {
         font-weight: 500
     }
     .shopingbag .onhover-show-div .total-price span:last-of-type {
-        color: var(--theme-color);
+        color: var(--theme-color-alpha);
         font-weight: 600
     }
 }
@@ -3604,7 +3604,7 @@ h6 {
 
 .shopingbag .onhover-show-div .card-wrap .cart-card .media-body>span {
     font-size: 12px;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-weight: 500;
     display: block;
     margin-bottom: 4px
@@ -3691,7 +3691,7 @@ h6 {
 }
 
 .user-dropdown .onhover-show-div li:hover a {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .user-dropdown .onhover-show-div li+li {
@@ -3743,7 +3743,7 @@ h6 {
 
 .custom-form input:focus,
 .custom-form .form-control:focus {
-    border: 1px solid var(--theme-color)
+    border: 1px solid var(--theme-color-alpha)
 }
 
 .custom-form textarea {
@@ -3884,7 +3884,7 @@ h6 {
     content: "";
     background: transparent;
     border-radius: 100%;
-    border: 2px solid var(--theme-color);
+    border: 2px solid var(--theme-color-alpha);
     display: inline-block;
     width: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
     height: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
@@ -3897,20 +3897,20 @@ h6 {
 }
 
 .radio-box input[type="radio"]:checked+.radio-label:before {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     -webkit-box-shadow: inset 0 0 0 3px #fff;
     box-shadow: inset 0 0 0 3px #fff
 }
 
 .radio-box input[type="radio"]:focus+.radio-label:before {
     outline: none;
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .radio-box input[type="radio"]:disabled+.radio-label:before {
     -webkit-box-shadow: inset 0 0 0 3px #fff;
     box-shadow: inset 0 0 0 3px #fff;
-    border-color: var(--theme-color);
+    border-color: var(--theme-color-alpha);
     background: #363636
 }
 
@@ -3979,7 +3979,7 @@ h6 {
     top: 4px;
     width: 5px;
     height: 10px;
-    border: solid var(--theme-color);
+    border: solid var(--theme-color-alpha);
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -4007,11 +4007,11 @@ h6 {
 
 .checkboxes.style-1 .checkbox__body span {
     font-size: 14px;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .checkboxes.style-1 input:checked~.checkbox__checkmark {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .checkboxes.style-1 input:checked~.checkbox__checkmark:after {
@@ -4019,11 +4019,11 @@ h6 {
 }
 
 .checkboxes.style-1:hover input~.checkbox__checkmark {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .checkboxes.style-1:hover .checkbox__checkmark {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .checkboxes.style-1:hover .checkbox__checkmark:after {
@@ -4031,7 +4031,7 @@ h6 {
 }
 
 .checkboxes.style-1:hover input~.checkbox__body {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .grid {
@@ -4227,7 +4227,7 @@ h6 {
     height: 100%;
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     z-index: 1;
     opacity: 0;
     -webkit-transform: scale(0);
@@ -4310,7 +4310,7 @@ h6 {
 .intagram-card .img-box .on-hover .content-box .share span svg {
     width: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
     height: calc(11px + (18 - 11) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .intagram-card .img-box .on-hover .content-box p {
@@ -4430,7 +4430,7 @@ h6 {
 }
 
 [class="dark"] .intagram-card.intagram-card2 .img-box .on-hover .content-box .option-box .btn-style2:hover {
-    color: var(--theme-color) !important
+    color: var(--theme-color-alpha) !important
 }
 
 .intagram-card2 .img-box.after-none::after {
@@ -4600,7 +4600,7 @@ h6 {
     line-height: 22px;
     margin-bottom: -2px;
     font-weight: 500;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .modal .modal-dialog .modal-content .modal-header .close-modal {
@@ -4825,7 +4825,7 @@ h6 {
 }
 
 .view-product.view-dark-product .product-detail-box .product-option .option .size-list li.active {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .view-product.view-dark-product .product-detail-box .product-option .price span {
@@ -5032,7 +5032,7 @@ h6 {
 .nav .nav-link .notification {
     border-radius: 100px;
     font-size: 12px;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff;
     width: 18px;
     height: 18px;
@@ -5073,7 +5073,7 @@ h6 {
 .nav-tabs-star .nav-pills li>svg {
     width: calc(14px + (17 - 14) * ((100vw - 320px) / (1920 - 320)));
     height: calc(14px + (17 - 14) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .nav-tabs-star .nav-pills .nav-link {
@@ -5101,11 +5101,11 @@ h6 {
     transition: all 0.6s;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .nav-tabs-star .nav-pills .nav-link.active {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     background-color: #fff
 }
 
@@ -5228,7 +5228,7 @@ h6 {
 .nav-tabs5 li .nav-link.active,
 .nav-tabs2 li .nav-link:hover,
 .nav-tabs5 li .nav-link:hover {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     background-color: #fff
 }
 
@@ -5236,21 +5236,21 @@ h6 {
 .nav-tabs5 li .nav-link.active span svg,
 .nav-tabs2 li .nav-link:hover span svg,
 .nav-tabs5 li .nav-link:hover span svg {
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .nav-tabs2 li .nav-link.active::after,
 .nav-tabs5 li .nav-link.active::after,
 .nav-tabs2 li .nav-link:hover::after,
 .nav-tabs5 li .nav-link:hover::after {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .nav-tabs2.solid-outline li .nav-link,
 .solid-outline.nav-tabs5 li .nav-link {
     background-color: #fff !important;
-    border: 1px solid var(--theme-color);
-    color: var(--theme-color)
+    border: 1px solid var(--theme-color-alpha);
+    color: var(--theme-color-alpha)
 }
 
 .nav-tabs2.solid-outline li .nav-link::after,
@@ -5269,7 +5269,7 @@ h6 {
 .nav-tabs2.solid-outline li .nav-link:hover,
 .solid-outline.nav-tabs5 li .nav-link:hover {
     color: #fff;
-    background-color: var(--theme-color) !important
+    background-color: var(--theme-color-alpha) !important
 }
 
 [class="dark"] .nav-tabs2.solid-outline li .nav-link.active,
@@ -5284,7 +5284,7 @@ h6 {
 .nav-tabs2.solid-outline li .nav-link:hover span,
 .solid-outline.nav-tabs5 li .nav-link:hover span {
     background-color: #fff;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .nav-tabs2.solid-outline li .nav-link.active span svg,
@@ -5341,7 +5341,7 @@ h6 {
     border: 1px solid rgba(221, 221, 221, 0.5) !important;
     border-bottom: 1px solid #fff !important;
     border-radius: 8px 8px 0 0;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .nav-tabs4 {
@@ -5385,7 +5385,7 @@ h6 {
 
 .nav-tabs4 .nav-item .nav-link.active {
     border-radius: 10px;
-    border-color: var(--theme-color);
+    border-color: var(--theme-color-alpha);
     background-color: #fff
 }
 
@@ -5399,7 +5399,7 @@ h6 {
 
 .nav-tabs4 .nav-item .nav-link svg {
     width: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color);
+    stroke: var(--theme-color-alpha);
     height: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)))
 }
 
@@ -5434,7 +5434,7 @@ h6 {
 }
 
 .nav-tabs5 li .nav-link.active {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff
 }
 
@@ -5459,7 +5459,7 @@ h6 {
 
 .nav-tabs6 .nav-link.active,
 .nav-tabs6 .nav-link:hover {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .nav-tabs6 li {
@@ -5474,7 +5474,7 @@ h6 {
 .nav-tabs6 li .dashed-border {
     width: 4px;
     height: 1px;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     position: relative;
     display: block;
     -webkit-box-align: center;
@@ -5739,11 +5739,11 @@ h6 {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .navbar-light .navbar-nav .nav-link:focus {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -5751,11 +5751,11 @@ h6 {
 }
 
 .navbar-light .navbar-nav .show>.nav-link {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .navbar-light .navbar-toggler {
@@ -5777,15 +5777,15 @@ h6 {
 }
 
 .navbar-light .navbar-text a {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .navbar-light .navbar-text a:hover {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .navbar-light .navbar-text a:focus {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .navbar {
@@ -6199,7 +6199,7 @@ h6 {
         color: #fff
     }
     .dark-demo .offcanvas.offcanvas-collapse .offcanvas-body .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
-        color: var(--theme-color);
+        color: var(--theme-color-alpha);
         -webkit-transform: translateX(5px);
         transform: translateX(5px)
     }
@@ -6238,10 +6238,10 @@ h6 {
         border: 0
     }
     .navbar-expand-xl .navbar-nav .nav-item:hover>.nav-link:not(.disabled) {
-        color: var(--theme-color)
+        color: var(--theme-color-alpha)
     }
     .navbar-expand-xl .navbar-nav .nav-item.active>.nav-link:not(.disabled) {
-        color: var(--theme-color)
+        color: var(--theme-color-alpha)
     }
     .navbar-expand-xl .navbar-nav>.dropdown>.dropdown-toggle::after {
         display: none
@@ -6282,7 +6282,7 @@ h6 {
         -webkit-transform: translateX(5px);
         transform: translateX(5px);
         background-color: transparent;
-        color: var(--theme-color)
+        color: var(--theme-color-alpha)
     }
     [dir="rtl"] .navbar-expand-xl .dropdown-menu .dropdown-item:hover {
         -webkit-transform: translateX(-5px);
@@ -6444,38 +6444,38 @@ h6 {
         position: relative;
         -webkit-transition: all 0.3s linear;
         transition: all 0.3s linear;
-        border-left: 2px solid var(--theme-color)
+        border-left: 2px solid var(--theme-color-alpha)
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .nav-item .dropdown-toggle.show {
         font-weight: 500;
         margin: 0 -1px;
-        border: 1px solid var(--theme-color);
+        border: 1px solid var(--theme-color-alpha);
         border-radius: 5px 5px 0 0;
-        background-color: var(--theme-color);
+        background-color: var(--theme-color-alpha);
         color: #fff
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .nav-item .dropdown-toggle.show .dropdown-menu {
-        border-left: 1px solid var(--theme-color)
+        border-left: 1px solid var(--theme-color-alpha)
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .nav-link {
         color: #5a5b75
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .nav-link:hover {
-        color: var(--theme-color);
+        color: var(--theme-color-alpha);
         background-color: transparent
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .nav-link.active {
-        color: var(--theme-color);
+        color: var(--theme-color-alpha);
         background-color: transparent
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .nav-link.disabled {
         color: #9e9fb4
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .show>.nav-link {
-        color: var(--theme-color)
+        color: var(--theme-color-alpha)
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .active>.nav-link {
-        color: var(--theme-color)
+        color: var(--theme-color-alpha)
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .dropdown-menu li {
         display: block
@@ -6497,11 +6497,11 @@ h6 {
         margin-top: 15px
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .dropdown-menu .dropdown-item:hover {
-        color: var(--theme-color);
+        color: var(--theme-color-alpha);
         background-color: transparent
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .dropdown-menu .dropdown-item.active {
-        color: var(--theme-color);
+        color: var(--theme-color-alpha);
         background-color: transparent
     }
     .offcanvas-collapse .offcanvas-body .navbar-nav .dropdown-menu .dropdown-item.disabled {
@@ -6556,7 +6556,7 @@ h6 {
     content: "";
     width: 100%;
     height: 2.5px;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -6644,7 +6644,7 @@ h6 {
 
 .pagination a.active,
 .pagination a:hover {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff
 }
 
@@ -6797,8 +6797,8 @@ h6 {
 .product-card .img-box .rating span svg {
     width: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 320)));
     height: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color);
-    fill: var(--theme-color)
+    stroke: var(--theme-color-alpha);
+    fill: var(--theme-color-alpha)
 }
 
 .product-card .img-box .option-wrap {
@@ -6855,7 +6855,7 @@ h6 {
 .product-card .img-box .option-wrap li button::after {
     content: "";
     position: absolute;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transition: all 0.5s;
@@ -7064,7 +7064,7 @@ h6 {
 }
 
 .product-card .content-box del {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .product-card:hover .option-wrap {
@@ -7317,7 +7317,7 @@ h6 {
 }
 
 .product-card-side .content-box a del {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .product-card-side .content-box .rating {
@@ -7362,8 +7362,8 @@ h6 {
 .product-card-side .content-box .rating span svg {
     width: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 320)));
     height: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color);
-    fill: var(--theme-color)
+    stroke: var(--theme-color-alpha);
+    fill: var(--theme-color-alpha)
 }
 
 .product-card-side.product-side2 {
@@ -7574,7 +7574,7 @@ h6 {
     font-weight: 500;
     font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(18px + (23 - 18) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .product-card-side4 {
@@ -7677,7 +7677,7 @@ h6 {
 }
 
 .product-card-side4 .content-box .option-wrap li a:hover {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff
 }
 
@@ -7816,7 +7816,7 @@ h6 {
 .product-card2 .option-wrap li button::after {
     content: "";
     position: absolute;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transition: all 0.5s;
@@ -8117,7 +8117,7 @@ h6 {
 .product-card4 .option-wrap li button::after {
     content: "";
     position: absolute;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transition: all 0.5s;
@@ -8279,7 +8279,7 @@ h6 {
 }
 
 .product-card4 .content-box .price-box span {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .product-card4 .content-box .price-box del {
@@ -8381,7 +8381,7 @@ h6 {
     font-weight: 500;
     font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
     line-height: 20px;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease
 }
@@ -8514,7 +8514,7 @@ h6 {
     font-weight: normal;
     font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: 26px;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .sale-card .sale-card-wrap .offer {
@@ -8566,7 +8566,7 @@ h6 {
     line-height: calc(42px + (90 - 42) * ((100vw - 320px) / (1920 - 320)));
     margin: 15px 0;
     font-family: "Montserrat", sans-serif;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .sale-card .sale-card-wrap .offer h5>span {
@@ -8614,7 +8614,7 @@ h6 {
     font-weight: 600;
     font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: 22px;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     margin-top: -1px;
     margin-bottom: calc(-5px + (-3 + 5) * ((100vw - 320px) / (1920 - 320)))
 }
@@ -8653,7 +8653,7 @@ h6 {
     position: absolute;
     content: "";
     inset: 0;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     opacity: 0.05;
     z-index: -1
 }
@@ -8704,14 +8704,14 @@ h6 {
 
 .progress {
     border-radius: 100px;
-    -webkit-box-shadow: inset 0 0 2px var(--theme-color);
-    box-shadow: inset 0 0 2px var(--theme-color);
+    -webkit-box-shadow: inset 0 0 2px var(--theme-color-alpha);
+    box-shadow: inset 0 0 2px var(--theme-color-alpha);
     height: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320)));
     margin-bottom: -1px
 }
 
 .progress .progress-bar {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 [dir="rtl"] .range-slider {
@@ -8756,7 +8756,7 @@ h6 {
     text-align: center;
     font-size: 14px;
     line-height: 18px;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .range-slider .price-input .field input[type="number"]::-webkit-outer-spin-button,
@@ -8797,7 +8797,7 @@ h6 {
     right: 25%;
     position: absolute;
     border-radius: 5px;
-    background: var(--theme-color)
+    background: var(--theme-color-alpha)
 }
 
 .range-slider .range-input {
@@ -8825,7 +8825,7 @@ h6 {
     height: 17px;
     width: 17px;
     border-radius: 50%;
-    background: var(--theme-color);
+    background: var(--theme-color-alpha);
     pointer-events: auto;
     -webkit-appearance: none;
     -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
@@ -8837,7 +8837,7 @@ h6 {
     width: 17px;
     border: none;
     border-radius: 50%;
-    background: var(--theme-color);
+    background: var(--theme-color-alpha);
     pointer-events: auto;
     -moz-appearance: none;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.05)
@@ -9011,7 +9011,7 @@ h6 {
     display: inline-block;
     color: #fff;
     padding: 0 8px;
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .sale-box h5 span {
@@ -9132,12 +9132,12 @@ h6 {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     border-color: transparent
 }
 
 .swiper-pagination-bullet-active::before {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .swiper-pagination.small {
@@ -9330,7 +9330,7 @@ h6 {
     border-bottom-color: rgba(221, 221, 221, 0.5) !important;
     font-size: 16px;
     cursor: pointer;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .comparemodal-body .table tr.table-product-details {
@@ -9352,7 +9352,7 @@ h6 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     border-radius: 5px
 }
 
@@ -9709,7 +9709,7 @@ h6 {
 .title-box .title-divider1 {
     width: calc(110px + (160 - 110) * ((100vw - 320px) / (1920 - 320)));
     height: 2px;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     gap: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9729,7 +9729,7 @@ h6 {
     height: calc(8px + (9 - 8) * ((100vw - 320px) / (1920 - 320)));
     display: block;
     position: relative;
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .title-box .title-divider1 .squre::after {
@@ -9769,7 +9769,7 @@ h6 {
     height: 24px;
     padding: 0 4px;
     background-color: #fff;
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .title-box .title-divider2::after {
@@ -9782,7 +9782,7 @@ h6 {
     width: calc(150px + (200 - 150) * ((100vw - 320px) / (1920 - 320)));
     height: 1px;
     z-index: -1;
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .title-box p {
@@ -9795,7 +9795,7 @@ h6 {
 }
 
 .gradient-title {
-    background-image: linear-gradient(100deg, #262834, var(--theme-color));
+    background-image: linear-gradient(100deg, #262834, var(--theme-color-alpha));
     background-clip: text;
     display: inline-block;
     -webkit-background-clip: text;
@@ -9921,7 +9921,7 @@ h6 {
     font-weight: 400;
     font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(20px + (29 - 20) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9934,7 +9934,7 @@ h6 {
 .title-box5 .sub-title .line {
     width: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
     height: 1px;
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .title-box5 .main-title {
@@ -10001,7 +10001,7 @@ h6 {
     font-weight: 600;
     font-size: calc(18px + (34 - 18) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(30px + (49 - 30) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -10015,7 +10015,7 @@ h6 {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     opacity: 0.1;
     z-index: -1
 }
@@ -10096,14 +10096,14 @@ h6 {
 }
 
 .title-box7 .heading span {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .title-box7 svg {
     margin-top: -13px;
     width: 136px;
     height: 13px;
-    fill: var(--theme-color)
+    fill: var(--theme-color-alpha)
 }
 
 .title-box7 p {
@@ -10170,7 +10170,7 @@ h6 {
 
 .title-square {
     padding: 7px calc(7px + (32 - 7) * ((100vw - 320px) / (1920 - 320)));
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff;
     font-weight: 500;
     font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
@@ -10482,7 +10482,7 @@ h6 {
     -ms-flex-pack: center;
     justify-content: center;
     color: #fff;
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 [class="dark"] .header-common .nav-wrap .menu-right .icon-menu li a .notification-label {
@@ -10638,7 +10638,7 @@ h6 {
 
 .header-common .category-menu .catagories-btn {
     padding: 13px 47px;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10765,7 +10765,7 @@ h6 {
         color: #5a5b75
     }
     .header1 .nav-wrap .navigation .navbar.navbar-expand-xl .navbar-nav .nav-link:hover {
-        color: var(--theme-color);
+        color: var(--theme-color-alpha);
         background-color: transparent
     }
     .header1 .nav-wrap .navigation .navbar.navbar-expand-xl .navbar-nav .nav-link.show {
@@ -11054,8 +11054,8 @@ h6 {
 }
 
 .header3 .nav-wrap .navigation .navbar .header-center .search-bar .input-group .input-group-append .input-group-text {
-    background-color: var(--theme-color);
-    border-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
+    border-color: var(--theme-color-alpha);
     padding: 11px 15px;
     border-radius: 0 5px 5px 0px;
     cursor: pointer
@@ -11120,9 +11120,15 @@ h6 {
 }
 
 .header3 .nav-wrap .menu-right {
-    margin-left: unset
+    margin-left: unset;
+    
 }
-
+.menu-right.contact-box
+{
+    background-color: var(--theme-color-alpha);
+    line-height: 20px;
+    padding: 13px 47px;
+}
 .header3 .nav-wrap .menu-right .icon-menu {
     gap: 0
 }
@@ -11271,7 +11277,7 @@ h6 {
 
 .header4 .nav-wrap .menu-right .icon-menu .search-full .input-group {
     border-radius: 0.25rem;
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .header4 .nav-wrap .menu-right .icon-menu .search-full .input-group .input-group-text {
@@ -11279,7 +11285,7 @@ h6 {
 }
 
 .header4 .nav-wrap .menu-right .icon-menu .search-full .input-group input {
-    border: 1px solid var(--theme-color);
+    border: 1px solid var(--theme-color-alpha);
     border-top: none;
     border-bottom: none
 }
@@ -11402,7 +11408,7 @@ h6 {
 }
 
 .header5 .navbar-expand-xl .dropdown-menu .dropdown-item:hover {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .header5 .navbar-expand-xl .dropdown-menu .dropdown-toggle::after {
@@ -11508,7 +11514,7 @@ body.sticky .header-common.clone {
 }
 
 .sidebar-inner .search-box input:focus {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .sidebar-inner .catagories-side {
@@ -11580,7 +11586,7 @@ body.sticky .header-common.clone {
 }
 
 .sidebar-inner .catagories-side li a .notification {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-size: 14px;
     width: 100%;
     -webkit-box-pack: end;
@@ -11591,7 +11597,7 @@ body.sticky .header-common.clone {
 }
 
 .sidebar-inner .catagories-side li:hover {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .sidebar-inner .catagories-side li:hover a {
@@ -11801,7 +11807,7 @@ body.sticky .header-common.clone {
 }
 
 .sidebar-inner .new-wrap .new-product .content-box del {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .sidebar-inner.product-page-sidebar .sidebar-box {
@@ -11893,9 +11899,9 @@ body.sticky .header-common.clone {
 }
 
 .tags li:hover a {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff;
-    border-color: var(--theme-color) !important
+    border-color: var(--theme-color-alpha) !important
 }
 
 [class="dark"] .tags li:hover a {
@@ -11934,7 +11940,7 @@ body.sticky .header-common.clone {
 }
 
 .sidebar-hidden .back-box {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -11997,7 +12003,7 @@ body.sticky .header-common.clone {
         left: unset
     }
     .sidebar-responsive .back-box {
-        background-color: var(--theme-color);
+        background-color: var(--theme-color-alpha);
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
@@ -12037,7 +12043,7 @@ body.sticky .header-common.clone {
 }
 
 [class="dark"] .home-slider-common .swiper-pagination .swiper-pagination-bullet-active {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .home-slider-common .home-slider .banner {
@@ -12147,7 +12153,7 @@ body.sticky .header-common.clone {
 
 .home-slider-common .home-slider .banner .content-box .heading span {
     font-weight: bold;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     position: relative;
     z-index: 1;
     width: -webkit-max-content;
@@ -12482,7 +12488,7 @@ body.sticky .header-common.clone {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 0;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     opacity: 0.15
 }
 
@@ -12613,7 +12619,7 @@ body.sticky .header-common.clone {
     font-weight: 500;
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12627,7 +12633,7 @@ body.sticky .header-common.clone {
     width: calc(18px + (34 - 18) * ((100vw - 320px) / (1920 - 320)));
     display: inline-block;
     height: 1px;
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .home-slider3 .content-box .heading {
@@ -12762,7 +12768,7 @@ body.sticky .header-common.clone {
 
 .home-slider4 .content-box .content {
     padding: calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320))) calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320))) calc(40px + (47 - 40) * ((100vw - 320px) / (1920 - 320))) calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320)));
-    border: 1px solid var(--theme-color);
+    border: 1px solid var(--theme-color-alpha);
     position: relative;
     border-bottom: none
 }
@@ -12902,7 +12908,7 @@ body.sticky .header-common.clone {
 .home-slider5 .banner .content-box .offer span {
     width: calc(15px + (54 - 15) * ((100vw - 320px) / (1920 - 320)));
     height: 1px;
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .home-slider5 .banner .content-box .heading {
@@ -13063,7 +13069,7 @@ body.sticky .header-common.clone {
 }
 
 .home-slider6 .content-box .heading strong {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-weight: 600
 }
 
@@ -13288,7 +13294,7 @@ body.sticky .header-common.clone {
     border-radius: 100%;
     opacity: 0.1;
     z-index: 1;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     -webkit-transition: all 0.6s;
     transition: all 0.6s
 }
@@ -13353,7 +13359,7 @@ body.sticky .header-common.clone {
 
 .catagories-section .catagories:hover,
 .catagories-section .catagories>a:active {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .catagories-section .catagories:hover .img-wrap img,
@@ -13514,8 +13520,8 @@ body.sticky .header-common.clone {
 
 .catagories-fashion .swiper-prev,
 .catagories-fashion .swiper-next {
-    border: 1px solid var(--theme-color);
-    background-color: var(--theme-color) !important
+    border: 1px solid var(--theme-color-alpha);
+    background-color: var(--theme-color-alpha) !important
 }
 
 .catagories-fashion .swiper-prev svg,
@@ -13530,7 +13536,7 @@ body.sticky .header-common.clone {
 
 .catagories-fashion .swiper-prev:hover svg,
 .catagories-fashion .swiper-next:hover svg {
-    stroke: var(--theme-color) !important
+    stroke: var(--theme-color-alpha) !important
 }
 
 .catagories-fashion .swiper-pagination {
@@ -13595,7 +13601,7 @@ body.sticky .header-common.clone {
 }
 
 .catagories-style-4 .catagories-box:hover .catagories-link {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .catagories-style-4 .catagories-box:hover .catagories-link img {
@@ -13911,7 +13917,7 @@ body.sticky .header-common.clone {
 }
 
 .offer-banner .offer-box .content-box h4 {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-style: normal;
     font-weight: 500;
     font-size: calc(15px + (26 - 15) * ((100vw - 320px) / (1920 - 320)));
@@ -14044,7 +14050,7 @@ body.sticky .header-common.clone {
 }
 
 .offer-banner2 .offer-box .content-box h2 strong {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .offer-banner2 .offer-box .content-box p {
@@ -14281,7 +14287,7 @@ body.sticky .header-common.clone {
     font-weight: 600;
     font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: 21px;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .special-product .product-box .catagories-large-label .timer li .timer-label {
@@ -14520,7 +14526,7 @@ body.sticky .header-common.clone {
     line-height: calc(19px + (23 - 19) * ((100vw - 320px) / (1920 - 320)));
     margin-bottom: 0;
     margin-top: calc(0px + (7 - 0) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .special-product-2 .product-box .catagories-large-label .timer {
@@ -14549,7 +14555,7 @@ body.sticky .header-common.clone {
 }
 
 .special-product-2 .product-box:hover .label-wrap span {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 @media only screen and (min-width: 390px) {
@@ -14710,7 +14716,7 @@ body.sticky .header-common.clone {
     font-weight: 600;
     font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: 21px;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .timer li .timer-label {
@@ -14741,7 +14747,7 @@ body.sticky .header-common.clone {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     opacity: 0.1
 }
 
@@ -14750,7 +14756,7 @@ body.sticky .header-common.clone {
     padding: 0;
     background-color: transparent;
     font-size: 25px;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .timer.timer2 li.colun::after {
@@ -14762,14 +14768,14 @@ body.sticky .header-common.clone {
     font-size: calc(14px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(20px + (34 - 20) * ((100vw - 320px) / (1920 - 320)));
     letter-spacing: -0.02em;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .timer.timer2 li .timer-label {
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .special-product-4 .big-ratio::before {
@@ -14856,7 +14862,7 @@ body.sticky .header-common.clone {
     font-weight: 500;
     font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(20px + (23 - 20) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     display: block;
     margin-top: -3px
 }
@@ -15112,7 +15118,7 @@ body.sticky .header-common.clone {
     font-weight: 600;
     font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: 21px;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 @media only screen and (max-width: 576px) {
@@ -15230,7 +15236,7 @@ body.sticky .header-common.clone {
     font-weight: 600;
     font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(25px + (52 - 25) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     margin-bottom: 11px
 }
 
@@ -15314,7 +15320,7 @@ body.sticky .header-common.clone {
 }
 
 .best-seller4 .banner-box .img-box .content-box h3 strong {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .best-seller4 .banner-box .img-box .content-box h4 {
@@ -15452,7 +15458,7 @@ body.sticky .header-common.clone {
     font-weight: normal;
     font-size: calc(0px + (119 - 0) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(45px + (130 - 45) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     -webkit-transform: rotate(-22.89deg);
     transform: rotate(-22.89deg);
     -webkit-transform-origin: center;
@@ -15570,7 +15576,7 @@ body.sticky .header-common.clone {
 }
 
 .sub-banner-2 .sub-banner .content-box .heading-wrap .offer-text strong {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-weight: 700;
     font-size: calc(18px + (50 - 18) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(22px + (49 - 22) * ((100vw - 320px) / (1920 - 320)))
@@ -15691,7 +15697,7 @@ body.sticky .header-common.clone {
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin: 0 auto -46px;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .sub-banner-4 .text-box p {
@@ -15781,7 +15787,7 @@ body.sticky .header-common.clone {
     font-weight: 700;
     font-size: calc(40px + (65 - 40) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(75px + (79 - 75) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -15988,7 +15994,7 @@ body.sticky .header-common.clone {
     font-weight: 500;
     font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(28px + (43 - 28) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     margin-bottom: calc(6px + (10 - 6) * ((100vw - 320px) / (1920 - 320)));
     margin-top: calc(-5px + (-6 + 5) * ((100vw - 320px) / (1920 - 320)))
 }
@@ -16110,7 +16116,7 @@ body.sticky .header-common.clone {
 }
 
 .sub-banner-7 .banner-box .content-box h6 span {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .sub-banner-7 .banner-box .content-box p {
@@ -16768,7 +16774,7 @@ body.sticky .header-common.clone {
 .decoration-section .decoration-content.decoration-content2 .icon-box span svg {
     width: 18px;
     height: 18px;
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .decoration-section .decoration-content.decoration-content2 p {
@@ -17263,8 +17269,8 @@ body.sticky .header-common.clone {
 .service-section2 .service-box .media svg {
     height: calc(24px + (30 - 24) * ((100vw - 320px) / (1920 - 320)));
     width: calc(30px + (36 - 30) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color);
-    fill: var(--theme-color)
+    stroke: var(--theme-color-alpha);
+    fill: var(--theme-color-alpha)
 }
 
 .service-section2 .service-box .media .media-body {
@@ -17332,7 +17338,7 @@ body.sticky .header-common.clone {
     content: "";
     width: inherit;
     height: inherit;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     opacity: 0.08;
     border-radius: inherit
 }
@@ -17403,8 +17409,8 @@ body.sticky .header-common.clone {
 }
 
 .service-section5 .banner-box .media svg {
-    stroke: var(--theme-color);
-    fill: var(--theme-color)
+    stroke: var(--theme-color-alpha);
+    fill: var(--theme-color-alpha)
 }
 
 .service-section5 .banner-box .media .media-body h5 {
@@ -17519,7 +17525,7 @@ body.sticky .header-common.clone {
 .footer-document .main-footer .content-box ul li .nav:hover {
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 [dir="rtl"] .footer-document .main-footer .content-box ul li .nav:hover {
@@ -17528,7 +17534,7 @@ body.sticky .header-common.clone {
 }
 
 .footer-document .main-footer .content-box ul li .nav:hover span {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .footer-document .main-footer .content-box ul li:first-of-type {
@@ -17583,7 +17589,7 @@ body.sticky .header-common.clone {
     font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
     line-height: 26px;
     text-transform: uppercase;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .footer-document .main-footer .content-box .subscribe-box p {
@@ -17643,7 +17649,7 @@ body.sticky .header-common.clone {
 }
 
 [class="dark"] .footer-document .main-footer .content-box .footer-form .btn-style2 {
-    border-color: var(--theme-color);
+    border-color: var(--theme-color-alpha);
     color: #fff
 }
 
@@ -17652,7 +17658,7 @@ body.sticky .header-common.clone {
 }
 
 [class="dark"] .footer-document .main-footer .content-box .footer-form .btn-style2:hover {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     border-color: #fff
 }
 
@@ -17752,7 +17758,7 @@ body.sticky .header-common.clone {
         content: "";
         inset: 0;
         position: absolute;
-        background-color: var(--theme-color);
+        background-color: var(--theme-color-alpha);
         opacity: 0.2;
         width: 100%;
         height: 100%;
@@ -17875,7 +17881,7 @@ body.sticky .header-common.clone {
         content: "";
         inset: 0;
         position: absolute;
-        background-color: var(--theme-color);
+        background-color: var(--theme-color-alpha);
         opacity: 0.2;
         width: 100%;
         height: 100%;
@@ -17960,13 +17966,13 @@ body.sticky .header-common.clone {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     position: absolute
 }
 
 .mobile-menu-footer ul li a.active svg,
 .mobile-menu-footer ul li a:hover svg {
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .mobile-menu-footer ul li a.active::after,
@@ -17976,12 +17982,12 @@ body.sticky .header-common.clone {
 
 .mobile-menu-footer ul li a.active span,
 .mobile-menu-footer ul li a:hover span {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 [class="dark"] .mobile-menu-footer ul li a.active span,
 [class="dark"] .mobile-menu-footer ul li a:hover span {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .mobile-menu-footer ul li a svg {
@@ -18029,14 +18035,14 @@ body.sticky .header-common.clone {
 .mobile-menu-footer.dark-footer2 ul li a.active svg,
 .mobile-menu-footer.dark-footer ul li a:hover svg,
 .mobile-menu-footer.dark-footer2 ul li a:hover svg {
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .mobile-menu-footer.dark-footer ul li a.active span,
 .mobile-menu-footer.dark-footer2 ul li a.active span,
 .mobile-menu-footer.dark-footer ul li a:hover span,
 .mobile-menu-footer.dark-footer2 ul li a:hover span {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .mobile-menu-footer.dark-footer2 {
@@ -18065,7 +18071,7 @@ body.sticky .header-common.clone {
 .page-body .edit svg {
     width: 18px;
     height: 18px;
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .page-body .bg-size {
@@ -18290,7 +18296,7 @@ body.sticky .header-common.clone {
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
     margin-top: -3px;
     margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -18328,7 +18334,7 @@ body.sticky .header-common.clone {
 }
 
 .blog-box .content-box:hover h5 {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .blog-box .content-box:hover>span {
@@ -18562,7 +18568,7 @@ body.sticky .header-common.clone {
 }
 
 .action-box .like.active svg {
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 @media only screen and (max-width: 475px) {
@@ -18851,7 +18857,7 @@ body.sticky .header-common.clone {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     width: inherit;
     height: inherit;
     border-radius: inherit;
@@ -18863,7 +18869,7 @@ body.sticky .header-common.clone {
     position: relative;
     width: 16px;
     height: 16px;
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .payment-section .accordion .accordion-item .accordion-button:not(.collapsed) span {
@@ -19003,7 +19009,7 @@ body.sticky .header-common.clone {
 }
 
 .address-box.checked {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .address-box h3 {
@@ -19019,7 +19025,7 @@ body.sticky .header-common.clone {
 .address-box .plus-icon svg {
     width: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
     height: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .address-box .radio-box {
@@ -19180,7 +19186,7 @@ body.sticky .header-common.clone {
 }
 
 .success-icon .success-contain h1 {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-size: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 500;
     margin-bottom: 10px
@@ -19242,7 +19248,7 @@ body.sticky .header-common.clone {
 }
 
 .oreder-tracking .filter-box .search-box input:focus {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 .oreder-tracking .filter-box .search-box input[type="search" i]::-webkit-search-cancel-button {
@@ -19268,7 +19274,7 @@ body.sticky .header-common.clone {
     -ms-flex-pack: center;
     justify-content: center;
     border-radius: 0 2px 2px 0;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     cursor: pointer
 }
 
@@ -19408,7 +19414,7 @@ body.sticky .header-common.clone {
 .user-dashboard .tab-wrap .side-bar .back-side svg {
     width: 20px;
     height: 20px;
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .user-dashboard .tab-wrap .side-bar .profile-box {
@@ -19687,7 +19693,7 @@ body.sticky .header-common.clone {
 }
 
 .user-dashboard .tab-wrap .right-content .address-box.checked {
-    border-color: var(--theme-color)
+    border-color: var(--theme-color-alpha)
 }
 
 @media only screen and (max-width: 375px) {
@@ -19914,7 +19920,7 @@ body.sticky .header-common.clone {
 
 .user-dashboard .tab-wrap .right-content .order-content .order-header span::after {
     content: "";
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     position: absolute;
     opacity: 0.08;
     inset: 0;
@@ -19926,7 +19932,7 @@ body.sticky .header-common.clone {
 .user-dashboard .tab-wrap .right-content .order-content .order-header span svg {
     width: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
     height: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .user-dashboard .tab-wrap .right-content .order-content .order-header .order-content {
@@ -19941,7 +19947,7 @@ body.sticky .header-common.clone {
 }
 
 .user-dashboard .tab-wrap .right-content .order-content .order-header .order-content .order-status.success {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .user-dashboard .tab-wrap .right-content .order-content .order-header .order-content p {
@@ -20094,7 +20100,7 @@ body.sticky .header-common.clone {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -20185,7 +20191,7 @@ body.sticky .header-common.clone {
 .user-dashboard .tab-wrap .right-content .order-data .payment-method .payment-box svg {
     width: 20px;
     height: 20px;
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .user-dashboard .tab-wrap .right-content .profile .custom-form label {
@@ -20485,7 +20491,7 @@ body.sticky .header-common.clone {
 .shop-page .filter-top-wrapper .filterlist .select-menu button .notification {
     border-radius: 100px;
     font-size: 12px;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff;
     width: 17px;
     height: 17px
@@ -20897,7 +20903,7 @@ body.sticky .header-common.clone {
 
 .shop-page .shop-product .top-header-wrap .filter-option-grid .nav-item .nav-link {
     background-color: #fff;
-    border: 1px solid var(--theme-color);
+    border: 1px solid var(--theme-color-alpha);
     color: #767676;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -20915,12 +20921,12 @@ body.sticky .header-common.clone {
 .shop-page .shop-product .top-header-wrap .filter-option-grid .nav-item .nav-link svg {
     width: 22px;
     height: 22px;
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .shop-page .shop-product .top-header-wrap .filter-option-grid .nav-item .nav-link.active {
     color: #262834;
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .shop-page .shop-product .top-header-wrap .filter-option-grid .nav-item .nav-link.active svg {
@@ -21006,7 +21012,7 @@ body.sticky .header-common.clone {
 
 .shop-page .product-tab-content .list-section .product-card .content-box p {
     margin-top: -3px;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)))
 }
 
@@ -21155,7 +21161,7 @@ body.sticky .header-common.clone {
 .shop-page .swiper-box .swiper-next:hover,
 .shop-page .swiper-box .swiper-next:focus,
 .shop-page .swiper-box .swiper-next:active {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .shop-page .catagories-shop {
@@ -21183,7 +21189,7 @@ body.sticky .header-common.clone {
 
 .shop-page .catagories-shop:hover,
 .shop-page .catagories-shop>a:active {
-    background-color: var(--theme-color)
+    background-color: var(--theme-color-alpha)
 }
 
 .shop-page .catagories-shop:hover .btn-box .catagories-name,
@@ -21400,7 +21406,7 @@ body.sticky .header-common.clone {
 }
 
 .view-product .product-detail-box .product-option .price del {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .view-product .product-detail-box .product-option .related-product h5 {
@@ -21481,7 +21487,7 @@ body.sticky .header-common.clone {
 .product-page .view-product .title-box4 .size-chart {
     font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 500;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     cursor: pointer
 }
 
@@ -21626,7 +21632,7 @@ body.sticky .header-common.clone {
 }
 
 .product-page .view-product .product-option .option.delevery-service .delevery-list li svg {
-    stroke: var(--theme-color);
+    stroke: var(--theme-color-alpha);
     width: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
     height: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)))
 }
@@ -21722,7 +21728,7 @@ body.sticky .header-common.clone {
 .product-page .description-box .nav .nav-link span {
     border-radius: 100px;
     font-size: 12px;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     color: #fff;
     width: 18px;
     height: 18px;
@@ -21799,7 +21805,7 @@ body.sticky .header-common.clone {
 .product-page .description-box .details-product .general-summery li svg {
     width: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
     height: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .product-page .description-box .details-product .general-summery li span {
@@ -21904,7 +21910,7 @@ body.sticky .header-common.clone {
 .product-page .description-box .seller-info .seller-details .review-rated li span {
     font-size: calc(15px + (16 - 15) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 500;
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .product-page .description-box .seller-info .seller-details .review-rated li span:last-of-type {
@@ -21952,7 +21958,7 @@ body.sticky .header-common.clone {
 .product-page .description-box .seller-info .addres-box p .contact svg {
     width: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
     height: calc(20px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color)
+    stroke: var(--theme-color-alpha)
 }
 
 .product-page .description-box .seller-info .addres-box p .contact-info {
@@ -22287,7 +22293,7 @@ body.sticky .header-common.clone {
 }
 
 .about-section .content-box h5 {
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 500;
     margin-bottom: 4px
@@ -22372,7 +22378,7 @@ body.sticky .header-common.clone {
     width: inherit;
     height: inherit;
     border-radius: inherit;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     opacity: 0.07
 }
 
@@ -22381,7 +22387,7 @@ body.sticky .header-common.clone {
     transition: all 0.4s;
     width: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
     height: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
-    stroke: var(--theme-color);
+    stroke: var(--theme-color-alpha);
     position: relative;
     z-index: 2
 }
@@ -22465,7 +22471,7 @@ body.sticky .header-common.clone {
 .review-section .avatar-content>h5 {
     font-size: 16px;
     font-weight: 500;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     margin-bottom: 8px
 }
 
@@ -22625,7 +22631,7 @@ body.sticky .header-common.clone {
 .team-section .member .content-box .social li svg {
     width: calc(22px + (27 - 22) * ((100vw - 320px) / (1920 - 320)));
     height: calc(22px + (27 - 22) * ((100vw - 320px) / (1920 - 320)));
-    fill: var(--theme-color)
+    fill: var(--theme-color-alpha)
 }
 
 .contact-section .title-box4 .heading {
@@ -22678,7 +22684,7 @@ body.sticky .header-common.clone {
     left: calc(-14.5px + (-16.5 + 14.5) * ((100vw - 320px) / (1920 - 320)));
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
     top: 50%;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-alpha);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%)
 }
@@ -22856,7 +22862,7 @@ body.sticky .header-common.clone {
 .coming-soon .content-box h5 {
     font-size: 16px;
     font-weight: 500;
-    color: var(--theme-color);
+    color: var(--theme-color-alpha);
     margin-bottom: calc(6px + (10 - 6) * ((100vw - 320px) / (1920 - 320)))
 }
 
@@ -23049,7 +23055,7 @@ body.sticky .header-common.clone {
 }
 
 .tabs-element .nav-tabs6 .nav-link.active {
-    color: var(--theme-color)
+    color: var(--theme-color-alpha)
 }
 
 .tabs-element .nav-tabs3 .nav-link {

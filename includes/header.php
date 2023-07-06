@@ -221,7 +221,7 @@
             <!-- Navigation End -->
 
             <!-- Menu Right Start  -->
-            <div class="menu-right">
+            <div class="menu-right contact-box">
               <div class="side-box">
                 <a class="help" href="tel:94719982906"><i data-feather="phone"></i> 071 998 2906</a>
               </div>
