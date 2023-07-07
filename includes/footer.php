@@ -1,11 +1,6 @@
 <!-- Document Footer Start -->
 <footer class="footer-document footer-document2 ratio_asos mb-xxl">
-      <!-- <div class="bg-footer-l">
-        <img src="assets/images/grocery/banner/bg-footer-l.png" alt="banner" />
-      </div>
-      <div class="bg-footer-r">
-        <img src="assets/images/grocery/banner/bg-footer-r.png" alt="banner" />
-      </div> -->
+      
       <div>
         <div class="container-lg">
           <center>
