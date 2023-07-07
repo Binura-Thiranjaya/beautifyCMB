@@ -200,6 +200,19 @@ function getProductData($product, $data){
     return "$return";
 }
 
+
+function getLatestProducts($limit) {
+    $sql = 'SELECT * FROM `products` ORDER BY id DESC LIMIT ' . $limit;
+    $data = db()->query($sql);
+
+    if ($data->num_rows == 0) {
+        return "N/A";
+    }
+
+    return $data;
+}
+
+
 function isUserExistFrom($data, $value){
     $sql = mysqli_query(db(), 'SELECT * FROM `users` WHERE '.$data.' = "'.$value.'" ') or die(mysqli_error());
     $count = mysqli_num_rows($sql);

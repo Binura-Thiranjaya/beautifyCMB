@@ -27,7 +27,7 @@
       background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1)) 
   }
   .bg-indigo {
-      background-color: #4835d4;
+      background-color: #00A6CA;
   }
   @media (min-width: 992px) {
       .card-registration-2 .bg-indigo {
@@ -173,7 +173,7 @@ if(isset($_POST['register'])){
                                     <div class="row g-0">
                                        <div class="col-lg-6">
                                           <div class="p-5">
-                                             <h3 class="fw-normal mb-5" style="color: #4835d4;">General Infomation</h3>
+                                             <h3 class="fw-normal mb-5" style="color: #00A6CA;">General Infomation</h3>
                                              <form action="register.php" method="POST">
                                               <div class="row">
                                                   <div class="col-md-6 mb-4 pb-2">

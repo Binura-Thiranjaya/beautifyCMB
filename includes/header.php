@@ -180,7 +180,7 @@
                         </button>
 
                         <ul class="onhover-show-div">
-                          <li><a href="shop.php?cat=mens">Mens</a></li>
+                          <li><a href="shop.php?cat=mens">Gents</a></li>
                           <li><a href="shop.php?cat=ladies">Ladies</a></li>
                         </ul>
                       </div>
@@ -201,7 +201,7 @@
 
                           <li class="nav-item">
                             <!-- <a class="nav-link" href="shop.php?cat=petceylon" >Mens</a> -->
-                            <a class="nav-link" href="shop.php?cat=mens" >Mens</a>
+                            <a class="nav-link" href="shop.php?cat=mens" >Gents</a>
 
                           </li>
 
