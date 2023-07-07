@@ -16,15 +16,11 @@
       <section class="home-slider3 ratio_40 p-0">
         <div class="banner">
           <div>
-            <img class="bg-img bg-top img-fluid" src="assets/images/grocery/banner/banner-bg.jpg" alt="banner-bg" />
+            <img class="bg-img bg-top img-fluid" src="assets/images/home/hero.jpg" alt="banner-bg" />
 
 
-            <!-- Shape Object -->
-            <img src="assets/png/Leaf1.png" class="shape-o-1" alt="leaf" />
-            <img src="assets/png/tomato1.png" class="shape-o-2" alt="Tomato" />
-            <img src="assets/png/Leaf1.png" class="shape-o-3" alt="leaf" />
-            <img src="assets/png/tomato.png" class="shape-o-4" alt="leaf" />
-            <img src="assets/png/tomato.png" class="shape-o-5" alt="leaf" />
+           
+           
           </div>
         </div>
       </section>
@@ -35,8 +31,7 @@
       <!-- Top Categories Section Start -->
       <section class="pb-0 catagories-style-3 after-img-wrap">
         <!-- After images -->
-        <img class="img-l1 img-abs" src="assets/png/tomato1.png" alt="img" />
-        <img class="img-l2 img-abs" src="assets/png/Leaf1.png" alt="img" />
+       
 
         <div class="container-lg">
 
