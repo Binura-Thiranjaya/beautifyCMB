@@ -145,14 +145,14 @@
 
                   <div class="col-10 ratio_square">
                     <div class="swiper mainslider2">
-                      <div class="swiper-wrapper">
+                      <div class="single-product-swiper swiper-wrapper primary-gray p-2 ">
 
                       <?php
                         $productImages = getProductAllImages($page_product);
 
                         foreach($productImages as $image){
                         ?>
-                          <div class="swiper-slide">
+                          <div class="swiper-slide single-product mx-auto">
                             <img class="bg-img" src="<?=$productImageDirectory;?><?=$image['image'];?>" alt="Product Image" />
                           </div>
                         <?php } ?>

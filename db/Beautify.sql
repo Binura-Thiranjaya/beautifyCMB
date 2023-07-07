@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jun 20, 2023 at 06:14 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.8
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jul 07, 2023 at 04:53 PM
+-- Server version: 5.7.31
+-- PHP Version: 8.1.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `Beautify`
+-- Database: `beautify`
 --
 
 -- --------------------------------------------------------
@@ -27,19 +27,21 @@ SET time_zone = "+00:00";
 -- Table structure for table `categories`
 --
 
-CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `cat` varchar(200) NOT NULL,
-  `cat_name` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `cat_name` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `cat`, `cat_name`) VALUES
-(1, 'mens', 'Mens'),
-(2, 'ladies', 'Ladies');
+(1, 'mens', 'GENTS'),
+(2, 'ladies', 'LADIES');
 
 -- --------------------------------------------------------
 
@@ -47,12 +49,14 @@ INSERT INTO `categories` (`id`, `cat`, `cat_name`) VALUES
 -- Table structure for table `comments`
 --
 
-CREATE TABLE `comments` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `comment_by` varchar(200) NOT NULL,
   `comment_product` varchar(200) NOT NULL,
   `comment_text` varchar(200) NOT NULL,
-  `comment_on` varchar(200) NOT NULL
+  `comment_on` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -61,16 +65,18 @@ CREATE TABLE `comments` (
 -- Table structure for table `coupons`
 --
 
-CREATE TABLE `coupons` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `coupons`;
+CREATE TABLE IF NOT EXISTS `coupons` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `coupon_code` varchar(200) NOT NULL,
   `coupon_type` varchar(200) NOT NULL,
   `coupon_cat` varchar(200) NOT NULL,
   `coupon_value` varchar(200) NOT NULL,
   `isTemp` varchar(200) NOT NULL,
   `attempts` varchar(200) NOT NULL,
-  `expired` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `expired` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `coupons`
@@ -85,12 +91,14 @@ INSERT INTO `coupons` (`id`, `coupon_code`, `coupon_type`, `coupon_cat`, `coupon
 -- Table structure for table `discounts`
 --
 
-CREATE TABLE `discounts` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `discounts`;
+CREATE TABLE IF NOT EXISTS `discounts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `product` varchar(200) NOT NULL,
   `droppedPrice` varchar(200) NOT NULL,
-  `droppedPercentage` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `droppedPercentage` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `discounts`
@@ -109,8 +117,9 @@ INSERT INTO `discounts` (`id`, `product`, `droppedPrice`, `droppedPercentage`) V
 -- Table structure for table `orders`
 --
 
-CREATE TABLE `orders` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE IF NOT EXISTS `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` varchar(200) NOT NULL,
   `order_by` varchar(200) NOT NULL,
   `order_on` varchar(200) NOT NULL,
@@ -125,8 +134,9 @@ CREATE TABLE `orders` (
   `order_subTotal` varchar(200) NOT NULL,
   `order_discount` varchar(200) NOT NULL,
   `order_deliveryFree` varchar(200) NOT NULL,
-  `order_totalAmount` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `order_totalAmount` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `orders`
@@ -136,10 +146,7 @@ INSERT INTO `orders` (`id`, `order_id`, `order_by`, `order_on`, `order_status`, 
 (6, 'ORDER6419bf1cb3121', 'Ganidu640594252de66', '2023-03-21 19:58', '1', '2', '************1292', 'TEST12', 'none', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"dw42q1e\",\"name\":\"Petceylone Product #2\",\"price\":\"3000\",\"quantity\":\"5\"}]', '15000', '15000', '0', '5000'),
 (8, 'ORDER64295c7ea0870', 'Ganidu640594252de66', '2023-04-02 16:14', '1', '2', '1292', 'test12', 'Test delivery Note', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"dw42q1e\",\"name\":\"Petceylone Product #2\",\"price\":\"3000\",\"quantity\":\"1\"}]', '3000', '90', '1', '2910'),
 (9, 'ORDER64295eac5b0be', 'Ganidu640594252de66', '2023-04-02 16:23', '0', '0', 'none', 'test12', 'none', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"dw42q1e\",\"name\":\"Petceylone Product #2\",\"price\":\"3000\",\"quantity\":\"1\"},{\"id\":\"xc34v5rtb6gy7unda\",\"name\":\"Petceylone Product #1\",\"price\":\"1500\",\"quantity\":\"1\"}]', '4500', '135', '1', '4365'),
-(10, 'ORDER6488aa07620f1', 'Ganidu640594252de66', '2023-06-13 23:10', '0', '0', 'none', '0', 'none', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"748165daw846tyd\",\"name\":\"Pet Ceylon conditioning shampoo SHINER\",\"price\":\"800\",\"quantity\":\"1\"}]', '800', '0', '0', '1150'),
-(11, 'ORDER648c7f3b98e3e', 'Binura648c7e512a61b', '2023-06-16 20:56', '0', '0', 'none', '0', 'none', '165/1 Weliweriya West, Weliweriya', '11710', '[{\"id\":\"748165daw846fwa\",\"name\":\"Pet Ceylon conditioning shampoo BLUE\",\"price\":\"595\",\"quantity\":\"3\"}]', '1785', '0', '0', '2135'),
-(12, 'ORDER648c7f66b02bb', 'Binura648c7e512a61b', '2023-06-16 20:57', '0', '0', 'none', '0', 'none', '165/1 Weliweriya West, Weliweriya', '11710', '[{\"id\":\"748165daw846fwa\",\"name\":\"Pet Ceylon conditioning shampoo BLUE\",\"price\":\"595\",\"quantity\":\"1\"}]', '595', '0', '0', '945'),
-(13, 'ORDER648c89735aa08', 'Binura648c7e512a61b', '2023-06-16 21:40', '0', '0', 'none', '0', 'none', '165/1 Weliweriya West, Weliweriya', '11710', '[{\"id\":\"748165daw846fwa\",\"name\":\"Pet Ceylon conditioning shampoo BLUE\",\"price\":\"595\",\"quantity\":\"2\"}]', '1190', '0', '0', '1540');
+(10, 'ORDER6488aa07620f1', 'Ganidu640594252de66', '2023-06-13 23:10', '0', '0', 'none', '0', 'none', '630/3 Vilahena Road, Pamunuwila, Gonawala', '11600', '[{\"id\":\"748165daw846tyd\",\"name\":\"Pet Ceylon conditioning shampoo SHINER\",\"price\":\"800\",\"quantity\":\"1\"}]', '800', '0', '0', '1150');
 
 -- --------------------------------------------------------
 
@@ -147,8 +154,9 @@ INSERT INTO `orders` (`id`, `order_id`, `order_by`, `order_on`, `order_status`, 
 -- Table structure for table `payments_history`
 --
 
-CREATE TABLE `payments_history` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `payments_history`;
+CREATE TABLE IF NOT EXISTS `payments_history` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `done_by` varchar(200) NOT NULL,
   `merchant_id` varchar(200) NOT NULL,
   `order_id` varchar(200) NOT NULL,
@@ -158,8 +166,9 @@ CREATE TABLE `payments_history` (
   `md5sig` varchar(200) NOT NULL,
   `card_holder_name` varchar(200) NOT NULL,
   `card_no` varchar(200) NOT NULL,
-  `card_expiry` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `card_expiry` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `payments_history`
@@ -175,25 +184,32 @@ INSERT INTO `payments_history` (`id`, `done_by`, `merchant_id`, `order_id`, `pay
 -- Table structure for table `products`
 --
 
-CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `product_uniqueID` varchar(200) NOT NULL,
   `product_category` varchar(200) NOT NULL,
   `product_name` varchar(200) NOT NULL,
   `product_price` varchar(200) NOT NULL,
   `product_description` mediumtext NOT NULL,
-  `product_stock` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `product_stock` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `product_uniqueID`, `product_category`, `product_name`, `product_price`, `product_description`, `product_stock`) VALUES
-(1, '748165daw84652q', 'mens', 'Pet Ceylon conditioning shampoo BERRY', '595', 'Size : 200ml', '10'),
-(3, '748165daw846fwa', 'mes', 'Pet Ceylon conditioning shampoo BLUE', '595', 'Size : 200ml', '4'),
-(4, '748165daw846tyd', 'mens', 'Pet Ceylon conditioning shampoo SHINER', '800', 'Size : 200ml', '9'),
-(5, '748165daw8466g7', 'ladies', 'Pet Ceylon calamine powder (anti-itching) ', '646', 'Size : 200ml', '10');
+(6, 'hugoboss-g1', 'mens', 'Hugo Boss 100ml', '35700', 'BOSS Bottled is the ideal fragrance for confident men who are driven to succeed. Fresh top notes of apple and citrus provides a fruity aroma which combines perfectly with middle notes of cinnamon and cloves to demand attention. Best of all, this cologne is finished off with base notes of sandalwood, cedarwood, amber, and musk to create a distinctly masculine scent.', '15'),
+(7, 'diorhomme-g2', 'mens', 'Dior Homme 120ml', '18000', 'Dior Homme Parfum by Dior is a Leather fragrance for men. Dior Homme Parfum was launched in 2014. The nose behind this fragrance is Francois Demachy. ', '9'),
+(8, 'diormidnight-l2', 'ladies', 'Midnight Poison', '28000', 'Midnight Poison by Dior is a Woody Chypre fragrance for women. Midnight Poison was launched in 2007. Midnight Poison was created by Jacques Cavallier, Olivier Cresp and Francois Demachy. Top notes are Bergamot and Mandarin Orange; middle note is Rose; base notes are Patchouli, Amber and Vanilla.', '8'),
+(9, 'diorpure-l3', 'ladies', 'Pure Poison Dior', '28000', 'Pure Poison by Dior is a Floral fragrance for women. Pure Poison was launched in 2004. Pure Poison was created by Carlos Benaim, Dominique Ropion and Olivier Polge. Top notes are Jasmine, Orange, Bergamot and Sicilian Mandarin; middle notes are Gardenia and Orange Blossom; base notes are Sandalwood, White Amber, Cedar and White Musk.', '10'),
+(10, 'Burberry My Burberry Blush-l4', 'ladies', 'Burberry My Burberry Blush', '22600', 'Introducing My Burberry Blush, a fruity floral Eau de Parfum with a sparkling twist. Stepping back into a London garden awakening in the first light of day, My Burberry Blush captures the senses as blossoming flowers pop with spirited energy.', '5'),
+(11, 'laloa_in_paris_bottle', 'ladies', 'laloa in paris 100ml', '3700', 'Laloa in Paris by Via Paris Parfums is a Floral fragrance for women. Laloa in Paris was launched in 2012. Top notes are Lemon, Tangerine, Grapefruit, Passionfruit, Apple, Wild Strawberry and Peach; middle notes are Rose, Jasmine, Raspberry, Mango, Plum, Green Leaves and Pineapple; base notes are Cedar, Musk, Caramel, Sandalowood, Amber and Vanilla.', '15'),
+(12, 'Elizabeth Arden Red Door', 'ladies', 'Elizabeth Arden Red Door 100ml', '22000', 'Red Door by Elizabeth Arden offers women of all ages a passionate and extravagant scent that bursts with exotic red roses, orchids, honey and spice. Ideal for the woman who wants to feel pampered, Elizabeth Arden\'s Red Door perfume enhances any romantic occasion, from a dinner date to a late night walk through downtown streets with your loved one.', '8'),
+(13, 'hugoboss-g3', 'mens', 'Hugo Boss Night 100ml', '35500', 'Boss Bottled Night is a fragrance by Hugo Boss which is aimed towards ambitious young men who strive for new challenges. As the name suggests, this cologne was made to be worn at night and features intense woody accords. Notes of lavender, birch trees and musk will remind you of hot summer evenings. Order today and give this seductive cologne to your significant other as a gift!', '7'),
+(14, 'adidas-ice-dive', 'mens', 'Adidas Ice Dive 100ml', '2400', 'adidas Ice Dive is a fresh and invigorating fragrance that features notes of sandalwood, citrus and tonka bean.', '15');
 
 -- --------------------------------------------------------
 
@@ -201,25 +217,28 @@ INSERT INTO `products` (`id`, `product_uniqueID`, `product_category`, `product_n
 -- Table structure for table `product_images`
 --
 
-CREATE TABLE `product_images` (
-  `img_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `product_images`;
+CREATE TABLE IF NOT EXISTS `product_images` (
+  `img_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_uniqueID` varchar(200) NOT NULL,
-  `image` varchar(2000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `image` varchar(2000) NOT NULL,
+  PRIMARY KEY (`img_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product_images`
 --
 
 INSERT INTO `product_images` (`img_id`, `product_uniqueID`, `image`) VALUES
-(1, '748165daw84652q', '748165daw84652q1.jfif'),
-(11, '748165daw84652q', '748165daw84652q1.jfif'),
-(12, '748165daw846fwa', '748165daw846fwa.jfif'),
-(13, '748165daw846fwa', '748165daw846fwa.jfif'),
-(14, '748165daw846tyd', '748165daw846tyd.jfif'),
-(15, '748165daw846tyd', '748165daw846tyd.jfif'),
-(16, '748165daw8466g7', '748165daw8466g7.jfif'),
-(17, '748165daw8466g7', '748165daw8466g7.jfif');
+(18, 'hugoboss-g1', 'hugoboss-g1.png'),
+(19, 'diorhomme-g2', 'diorhomme-g2'),
+(20, 'diormidnight-l2', 'diormidnight-l2.png'),
+(21, 'diorpure-l3', 'diorpure-l3.png'),
+(22, 'Burberry My Burberry Blush-l4', 'Burberry My Burberry Blush-l4.png'),
+(23, 'laloa_in_paris_bottle', 'laloa_in_paris_bottle.png'),
+(24, 'Elizabeth Arden Red Door', 'Elizabeth Arden Red Door.png'),
+(25, 'hugoboss-g3', 'hugoboss-g3.png'),
+(26, 'adidas-ice-dive', 'adidas-ice-dive.png');
 
 -- --------------------------------------------------------
 
@@ -227,8 +246,9 @@ INSERT INTO `product_images` (`img_id`, `product_uniqueID`, `image`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_uniqueID` varchar(200) NOT NULL,
   `user_FirstName` varchar(200) NOT NULL,
   `user_LastName` varchar(200) NOT NULL,
@@ -239,132 +259,16 @@ CREATE TABLE `users` (
   `user_Country` varchar(200) NOT NULL,
   `user_ZipCode` varchar(200) NOT NULL,
   `user_LastLogin` varchar(200) NOT NULL,
-  `user_LastLoginIP` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `user_LastLoginIP` varchar(200) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `user_uniqueID`, `user_FirstName`, `user_LastName`, `user_Email`, `user_Password`, `user_Address`, `user_Mobile`, `user_Country`, `user_ZipCode`, `user_LastLogin`, `user_LastLoginIP`) VALUES
-(4, 'Ganidu640594252de66', 'admin', 'admin', 'admin@gmail.com', '123', '630/3 Vilahena Road, Pamunuwila, Gonawala', '0757856219', 'SRI-LANKA', '11600', '2023-03-06 12:50', '127.0.0.1'),
-(5, 'Binura648c7e512a61b', 'Binura', 'Thiranjaya', 'binurathiranjaya@gmail.com', '$2y$10$LYu0kmIjI1DSMBbNCIUE5etTx345ouUQOFRub/Y2KHw63iekcKeaG', '165/1 Weliweriya West, Weliweriya', '0719982906', 'SRI-LANKA', '11710', '2023-06-16 20:52', '::1');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `comments`
---
-ALTER TABLE `comments`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `coupons`
---
-ALTER TABLE `coupons`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `discounts`
---
-ALTER TABLE `discounts`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `orders`
---
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `payments_history`
---
-ALTER TABLE `payments_history`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `product_images`
---
-ALTER TABLE `product_images`
-  ADD PRIMARY KEY (`img_id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `coupons`
---
-ALTER TABLE `coupons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `discounts`
---
-ALTER TABLE `discounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `payments_history`
---
-ALTER TABLE `payments_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `products`
---
-ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `product_images`
---
-ALTER TABLE `product_images`
-  MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+(4, 'Ganidu640594252de66', 'Ganidu', 'Sathishka', 'ganidu49@gmail.com', '$2y$10$VJA60g5mu4pTrnhDTiFIAu0oifbNZRpn8gaodPwMw/WnEP5F9WlUO', '630/3 Vilahena Road, Pamunuwila, Gonawala', '0757856219', 'SRI-LANKA', '11600', '2023-03-06 12:50', '127.0.0.1');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

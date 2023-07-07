@@ -55,23 +55,28 @@
       </div>
       <!-- Breadcrumb End -->
 
-      <?php if($page_category == "petceylon"){ ?>
+      <?php if($page_category == "mens"){ ?>
         <section class="home-slider3 ratio_40 p-0">
         <div class="banner">
           <div>
-            <img class="bg-img bg-top img-fluid" src="assets/images/bg/banner_1.jpg" alt="banner-bg" />
-
-
-            <!-- Shape Object -->
-            <img src="assets/png/Leaf1.png" class="shape-o-1" alt="leaf" />
-            <img src="assets/png/tomato1.png" class="shape-o-2" alt="Tomato" />
-            <img src="assets/png/Leaf1.png" class="shape-o-3" alt="leaf" />
-            <img src="assets/png/tomato.png" class="shape-o-4" alt="leaf" />
-            <img src="assets/png/tomato.png" class="shape-o-5" alt="leaf" />
+            <img class="bg-img bg-top img-fluid" src="assets/images/bg/menbanner.png" alt="banner-bg" />
           </div>
         </div>
       </section>
       <?php } ?>
+
+
+      <?php if($page_category == "ladies"){ ?>
+        <section class="home-slider3 ratio_40 p-0">
+        <div class="banner">
+          <div>
+            <img class="bg-img bg-top img-fluid" src="assets/images/bg/ladiesbanner.jpg" alt="banner-bg" />
+          </div>
+        </div>
+      </section>
+      <?php } ?>
+
+
 
       <!-- Shop Section Start -->
       <section class="shop-page">
@@ -83,7 +88,7 @@
             <div class="col-lg-12 col-xl-12">
               <div class="row gy-5 g-lg-3 g-xxl-4">
                 <?php
-                if($page_category == "petceylon"){
+                if($page_category == "mens"){
                 ?>
                 <!-- <div class="col-12 order-2 order-lg-1">
                   <div class="round-wrap-content p-0 overflow-hidden">
@@ -124,10 +129,10 @@
                       ?>
                       <!-- Product Start -->
                         <div>
-                          <div class="product-card">
-                            <div class="img-box">
+                          <div class="product-card p-3">
+                            <div class="img-box primary-gray p-2">
                               <!-- Thumbnail -->
-                              <ul class="thumbnail-img">
+                              <!-- <ul class="thumbnail-img">
                                 <li class="active thumb"><img src="<?=$productImageDirectory;?><?=getProductMainImage($product['product_uniqueID'], "image");?>" alt="Product Image" /></li>
                                 <?php
                                   $productImages = getProductImages($product['product_uniqueID']); 
@@ -135,14 +140,14 @@
                                 ?>
                                     <li class="thumb"><img src="<?=$productImageDirectory;?><?=$image['image'];?>" alt="Product Image" /></li>
                                 <?php } ?>
-                              </ul>
+                              </ul> -->
 
                               <a href="<?=$openLink;?>" class="primary-img"><img class="img-fluid bg-img" src="<?=$productImageDirectory;?><?=getProductMainImage($product['product_uniqueID'], "image");?>" alt="Product Image" /> </a>
 
                             </div>
 
                             <!-- Content Box -->
-                            <div class="content-box">
+                            <div class="content-box product-card-content">
                               <a href="<?=$openLink;?>">
                                 <?php if($product['product_stock'] <= 5){ ?>
                                   <p><font color="red">Available Stocks : <?=$product['product_stock'];?></font></p>
