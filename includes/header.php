@@ -16,7 +16,7 @@
     <!-- Overlay -->
     <a href="javascript:void(0)" class="overlay-general"></a>
     <!-- Header Start -->
-    <header class="header-common header3">
+    <header class="header-common header3 bg-white">
       <!-- Top Header -->
       <div class="top-header bg-theme-theme">
         <div class="container-lg">
@@ -26,12 +26,12 @@
         </div>
       </div>
 
-      <div class="container-lg">
+      <div class="container-lg ">
         <div class="nav-wrap">
           <!-- Navigation Start -->
-          <nav class="navigation">
+          <nav class="navigation ">
             <div class="nav-section">
-              <div class="header-section">
+              <div class="header-section ">
                 <div class="navbar navbar-expand-xl navbar-light navbar-sticky p-0">
                   <div class="d-flex logo-wraper">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu" aria-controls="primaryMenu">

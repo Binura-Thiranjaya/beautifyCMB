@@ -1,5 +1,5 @@
 <!-- Document Footer Start -->
-<footer class="footer-document footer-document2 ratio_asos mb-xxl">
+<footer class="footer-document footer-document2 ratio_asos mb-xxl ">
       
       <div>
         <div class="container-lg">

@@ -34,7 +34,10 @@
 {
     background-color: var(--primary-gray);
 }
-
+.main
+{
+    margin-top: 10vh;
+}
 
 .new-arrival .card
 {
@@ -3196,11 +3199,12 @@ h6 {
 }
 
 .breadcrumb-wrap {
-    background-color: #fafafa
+    background-color: #ffffff;
 }
 
 .breadcrumb-wrap .banner {
-    padding: calc(38px + (50 - 38) * ((100vw - 320px) / (1920 - 320))) 0
+    padding: calc(50px + (50 - 38) * ((100vw - 320px) / (1920 - 320))) 0;
+    
 }
 
 [class="dark"] .breadcrumb-wrap .banner {
@@ -3212,7 +3216,7 @@ h6 {
     font-size: calc(24px + (30 - 24) * ((100vw - 320px) / (1920 - 320)));
     font-family: "Montserrat", sans-serif;
     color: #262834;
-    margin-top: -3px
+    
 }
 
 .breadcrumb-wrap .banner .search-box {
@@ -3234,6 +3238,7 @@ h6 {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin-top: 42px !important;
     gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)))
 }
 
@@ -10045,6 +10050,7 @@ h6 {
     background-color: var(--theme-color-alpha)
 }
 
+
 .title-box5 .main-title {
     font-weight: 600;
     font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (1920 - 320)));
@@ -10363,6 +10369,13 @@ h6 {
 
 .header-common .select-menu .dropdown:not(:last-of-type) {
     border-right: 1px solid rgba(82, 82, 82, 0.5)
+}
+.header-common
+{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0 !important;
 }
 
 [dir="rtl"] .header-common .select-menu .dropdown:not(:last-of-type) {

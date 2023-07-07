@@ -213,6 +213,42 @@ function getLatestProducts($limit) {
 }
 
 
+function getMaxLatestProductMens($limit) {
+    $sql = 'SELECT p.*, c.cat AS product_category
+            FROM products p
+            INNER JOIN categories c ON p.product_category = c.cat
+            WHERE p.product_category IN ("mens")
+            ORDER BY p.product_price DESC
+            LIMIT ' . $limit;
+
+    $data = db()->query($sql);
+
+    if ($data->num_rows == 0) {
+        return "N/A";
+    }
+
+    return $data;
+}
+
+function getMaxLatestProductLadies($limit) {
+    $sql = 'SELECT p.*, c.cat AS product_category
+            FROM products p
+            INNER JOIN categories c ON p.product_category = c.cat
+            WHERE p.product_category IN ("ladies")
+            ORDER BY p.product_price DESC
+            LIMIT ' . $limit;
+
+    $data = db()->query($sql);
+
+    if ($data->num_rows == 0) {
+        return "N/A";
+    }
+
+    return $data;
+}
+
+
+
 function isUserExistFrom($data, $value){
     $sql = mysqli_query(db(), 'SELECT * FROM `users` WHERE '.$data.' = "'.$value.'" ') or die(mysqli_error());
     $count = mysqli_num_rows($sql);
