@@ -35,7 +35,7 @@
             </li>
 
             <li class="nav-item" role="presentation">
-                <a class="nav-link <?=setScriptClassActive('my-payments.php');?>" href="my-payments.php">
+                <a class="nav-link <?=setScriptClassActive('manage-product.php');?>" href="manage-product.php">
                     Manage Products
                     <span><i data-feather="chevron-right"></i></span>
                 </a>

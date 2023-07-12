@@ -43,7 +43,7 @@
                   <!-- <h3>SECRET SEIN</h3>
                     <a href="shop.php?cat=secretsein" class="btn-style3 btn-sm">SHOP NOW </a> -->
                   <h3>Gents</h3>
-                  <a href="shop.php?cat=mens" class="btn-style3 btn-sm">SHOP NOW </a>
+                  <a href="shop.php?cat=GENTS" class="btn-style3 btn-sm">SHOP NOW </a>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@
                     <h4>Save Up to 10 % off</h4>
                     <a href="shop.php?cat=petceylon" class="btn-style3 btn-sm">SHOP NOW </a> -->
                   <h3>Ladies</h3>
-                  <a href="shop.php?cat=ladies" class="btn-style3 btn-sm">SHOP NOW </a>
+                  <a href="shop.php?cat=LADIES" class="btn-style3 btn-sm">SHOP NOW </a>
                 </div>
               </div>
             </div>

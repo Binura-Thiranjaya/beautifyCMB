@@ -64,7 +64,7 @@
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="cart.php" data-class="manage-product" class="tab-box">
+                        <a href="manage-product.php" data-class="manage-product" class="tab-box">
                           <img src="https://www.svgrepo.com/show/486797/product-catalog.svg" alt="manage" />
                           <h5>Manage Products</h5>
                           <p>Update, Hide products from stock</p>

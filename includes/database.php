@@ -201,6 +201,22 @@ function getProductData($product, $data){
 }
 
 
+
+function getStock()
+{
+    $sql = mysqli_query(db(), 'SELECT * FROM `products`') or die(mysqli_error());
+    
+    if ($sql) {
+        $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+        return $result;
+    } else {
+        return null;
+    }
+}
+
+
+
+
 function getLatestProducts($limit) {
     $sql = 'SELECT * FROM `products` ORDER BY id DESC LIMIT ' . $limit;
     $data = db()->query($sql);
@@ -217,7 +233,7 @@ function getMaxLatestProductMens($limit) {
     $sql = 'SELECT p.*, c.cat AS product_category
             FROM products p
             INNER JOIN categories c ON p.product_category = c.cat
-            WHERE p.product_category IN ("mens")
+            WHERE p.product_category IN ("GENTS")
             ORDER BY p.product_price DESC
             LIMIT ' . $limit;
 
@@ -234,7 +250,7 @@ function getMaxLatestProductLadies($limit) {
     $sql = 'SELECT p.*, c.cat AS product_category
             FROM products p
             INNER JOIN categories c ON p.product_category = c.cat
-            WHERE p.product_category IN ("ladies")
+            WHERE p.product_category IN ("LADIES")
             ORDER BY p.product_price DESC
             LIMIT ' . $limit;
 

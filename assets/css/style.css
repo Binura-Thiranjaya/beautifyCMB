@@ -139,6 +139,39 @@
       border: none !important;
   }
 
+  .custom-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-select select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    color: red;
+  }
+  
+  .custom-select .arrow {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-top: 4px solid #000;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    pointer-events: none;
+  }
+  
+  .custom-select.select-error select {
+    border-color: red;
+  }
+  
+
 @-webkit-keyframes fadeInRight {
     0% {
         opacity: 0;
