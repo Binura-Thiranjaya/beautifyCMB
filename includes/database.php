@@ -28,7 +28,7 @@ Configurations
 
 date_default_timezone_set('Asia/Colombo');
 $loader = "BeautifyCMB";
-$productImageDirectory = "assets/images/products/";
+$productImageDirectory = "data:image/jpeg;base64,";
 
 
 //Functions
