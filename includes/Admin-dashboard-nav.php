@@ -42,35 +42,35 @@
             </li>
 
             <li class="nav-item" role="presentation">
-                <a class="nav-link <?=setScriptClassActive('my-profile.php');?>" href="my-profile.php">
+                <a class="nav-link <?=setScriptClassActive('view-stock.php');?>" href="view-stock.php">
                 View Products
                     <span><i data-feather="chevron-right"></i></span>
                 </a>
             </li>
 
             <li class="nav-item" role="presentation">
-                <a class="nav-link <?=setScriptClassActive('my-address.php');?>" href="my-address.php">
+                <a class="nav-link <?=setScriptClassActive('view-orders.php');?>" href="view-orders.php">
                     View Orders
                     <span><i data-feather="chevron-right"></i></span>
                 </a>
             </li>
 
             <li class="nav-item" role="presentation">
-                <a class="nav-link <?=setScriptClassActive('my-passwordChange.php');?>" href="my-passwordChange.php">
+                <a class="nav-link <?=setScriptClassActive('view-payments.php');?>" href="view-payments.php">
                     View Payments
                     <span><i data-feather="chevron-right"></i></span>
                 </a>
             </li>
 
             <li class="nav-item" role="presentation">
-                <a class="nav-link <?=setScriptClassActive('my-passwordChange.php');?>" href="my-passwordChange.php">
+                <a class="nav-link <?=setScriptClassActive('feedback.php');?>" href="feedback.php">
                     Manage Feedback
                     <span><i data-feather="chevron-right"></i></span>
                 </a>
             </li>
 
             <li class="nav-item" role="presentation">
-                <a class="nav-link <?=setScriptClassActive('my-passwordChange.php');?>" href="my-passwordChange.php">
+                <a class="nav-link <?=setScriptClassActive('coupons.php');?>" href="coupons.php">
                     Coupons
                     <span><i data-feather="chevron-right"></i></span>
                 </a>

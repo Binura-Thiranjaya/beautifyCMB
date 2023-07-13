@@ -71,35 +71,35 @@
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="my-address.php" data-class="view-product" class="tab-box">
+                        <a href="view-stock.php" data-class="view-stock" class="tab-box">
                           <img src="https://www.svgrepo.com/show/486795/product.svg" alt="product" />
                           <h5>View Products</h5>
                           <p>Check stock availability</p>
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="my-payments.php" data-class="view-order" class="tab-box">
+                        <a href="view-orders.php" data-class="view-order" class="tab-box">
                           <img src="https://www.svgrepo.com/show/458982/view-alt.svg" alt="view order" />
                           <h5>View Orders</h5>
                           <p>Track Order History</p>
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="my-profile.php" data-class="view-payments" class="tab-box">
+                        <a href="view-payments.php" data-class="view-payments" class="tab-box">
                           <img src="https://www.svgrepo.com/show/164255/online-pay.svg" alt="view payments" />
                           <h5>View Payments</h5>
                           <p>Track Payment History</p>
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="my-passwordChange.php" data-class="feedback" class="tab-box">
+                        <a href="feedback.php" data-class="feedback" class="tab-box">
                           <img src="https://www.svgrepo.com/show/486241/feedback-backup.svg" alt="feeback" />
                           <h5>Manage Feedback</h5>
                           <p>Show,Hide Customer Feedback</p>
                         </a>
                       </div>
                       <div class="col-sm-6 col-xl-4">
-                        <a href="my-passwordChange.php" data-class="coupon" class="tab-box">
+                        <a href="coupons.php" data-class="coupon" class="tab-box">
                           <img src="https://www.svgrepo.com/show/381384/coupon.svg" alt="coupon" />
                           <h5>Coupons</h5>
                           <p>Set Discounts using Coupons</p>

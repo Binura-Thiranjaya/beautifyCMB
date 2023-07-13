@@ -69,6 +69,7 @@
                           $unitPrice = $product['product_price'];
                           $quantity = $product['product_stock'];
                           $UID = $product['product_uniqueID'];
+                          $description = $product['product_description'];
                           $availability = $product['availability'];
 
                           // Set the selected option in the category dropdown
@@ -92,9 +93,8 @@
                           <label for="product-category">Product Category</label>
                           <select class="form-control cat-drop" id="product-category" name="product-category" required>
                           
-                                                       
-                                                        
-                          <option value="<?php echo $categoryId; ?>"><?php echo $categoryId; ?></option>
+                           
+                          <option value="<?php echo $categoryId; ?>"><?php echo $categoryName; ?></option>
                          
                           </select>
                         </div>
@@ -133,7 +133,7 @@
                       <div class="col-12">
                         <div class="input-box">
                           <label for="product-description">Product Description</label>
-                          <input class="form-control" id="product-description" name="product-description" type="text" value="<?php echo $availability; ?>" required>
+                          <input class="form-control" id="product-description" name="product-description" type="text" value="<?php echo $description; ?>" required>
                         </div>
                       </div>
 

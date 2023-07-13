@@ -215,6 +215,45 @@ function getStock()
 }
 
 
+function getOrderHistory()
+{
+    $sql = mysqli_query(db(), 'SELECT * FROM `orders`') or die(mysqli_error());
+    
+    if ($sql) {
+        $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+        return $result;
+    } else {
+        return null;
+    }
+}
+
+
+function getPaymentHistory()
+{
+    $sql = mysqli_query(db(), 'SELECT * FROM `payments_history`') or die(mysqli_error());
+    
+    if ($sql) {
+        $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+        return $result;
+    } else {
+        return null;
+    }
+}
+
+
+function getFeedback()
+{
+    $sql = mysqli_query(db(), 'SELECT * FROM `comments`') or die(mysqli_error());
+    
+    if ($sql) {
+        $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+        return $result;
+    } else {
+        return null;
+    }
+}
+
+
 
 
 function getLatestProducts($limit) {
