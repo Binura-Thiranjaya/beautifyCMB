@@ -15,14 +15,10 @@
   <!-- Main Start -->
   <main class="main">
     <!-- Home Banner Section Start -->
-    <section class="home-slider3 ratio_40 p-0">
+    <section class="home-slider3 ratio_40 p-0 ">
       <div class="banner">
         <div>
           <img class="bg-img bg-top img-fluid" src="assets/images/home/hero.jpg" alt="banner-bg" />
-
-
-
-
         </div>
       </div>
     </section>
@@ -47,7 +43,7 @@
                   <!-- <h3>SECRET SEIN</h3>
                     <a href="shop.php?cat=secretsein" class="btn-style3 btn-sm">SHOP NOW </a> -->
                   <h3>Gents</h3>
-                  <a href="shop.php?cat=mens" class="btn-style3 btn-sm">SHOP NOW </a>
+                  <a href="shop.php?cat=GENTS" class="btn-style3 btn-sm">SHOP NOW </a>
                 </div>
               </div>
             </div>
@@ -62,7 +58,7 @@
                     <h4>Save Up to 10 % off</h4>
                     <a href="shop.php?cat=petceylon" class="btn-style3 btn-sm">SHOP NOW </a> -->
                   <h3>Ladies</h3>
-                  <a href="shop.php?cat=ladies" class="btn-style3 btn-sm">SHOP NOW </a>
+                  <a href="shop.php?cat=LADIES" class="btn-style3 btn-sm">SHOP NOW </a>
                 </div>
               </div>
             </div>
@@ -81,37 +77,106 @@
       <h2 class="text-center">New Arrivals</h2>
       <div class="swiper">
         <div class="swiper-wrapper">
-        <?php
-          $latestProducts = getLatestProducts(5); 
-         
-         
-         
+          <?php
+          $latestProducts = getLatestProducts(5);
+
+
+
           ?>
-<?php while ($product = mysqli_fetch_assoc($latestProducts)) { 
-  
-  $productUniqueID = $product['product_uniqueID'];
-  $openLink = "view-product.php?product=$productUniqueID";
-  
-  ?>
-          <div class="swiper-slide swiper-slide--one col-6 col-md-3 col-sm-3 col-lg-3">
-            <div class="card">
-              <div class="img-box">
-              <a href="<?=$openLink;?>"><img src="<?=$productImageDirectory;?><?=getProductMainImage($product['product_uniqueID'], "image");?>" alt="Product Image" /></a>
-              </div>
-              <div class="card-info-wrapper p-2">
-                <div class="text-center primary-gray p-2">
-                <h4><?php echo getProductData($product['product_uniqueID'], 'product_name'); ?></h4>
-                <h3><?php echo getProductData($product['product_uniqueID'], 'product_price'); ?> LKR</h3>
+          <?php while ($product = mysqli_fetch_assoc($latestProducts)) {
+
+            $productUniqueID = $product['product_uniqueID'];
+            $openLink = "view-product.php?product=$productUniqueID";
+
+          ?>
+            <div class="swiper-slide swiper-slide--one col-6 col-md-3 col-sm-3 col-lg-3">
+              <div class="card">
+                <div class="img-box">
+                  <a href="<?= $openLink; ?>"><img src="<?= $productImageDirectory; ?><?= getProductMainImage($product['product_uniqueID'], "image"); ?>" alt="Product Image" /></a>
+                </div>
+                <div class="card-info-wrapper p-2">
+                  <div class="text-center primary-gray p-2">
+                    <h4><?php echo getProductData($product['product_uniqueID'], 'product_name'); ?></h4>
+                    <h3><?php echo getProductData($product['product_uniqueID'], 'product_price'); ?> LKR</h3>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <?php } ?>        
+          <?php } ?>
         </div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
     <!-- New arrival -->
+
+
+
+
+    <!-- Mens Section -->
+    <?php
+$maxProducts = getMaxLatestProductMens(8);
+?>
+    <div class="container p-3 mt-5 mens-section text-center ">
+      <h3>Gents Collection</h3>
+      <p>Move with Luxury</p>
+      <div class="row p-2">
+
+
+      <?php while ($product = mysqli_fetch_assoc($maxProducts)) { ?>
+        <div class="p-2 card-wrapper col-12 col-md-3 col-sm-3 col-lg-3">
+          <div class="card ">
+            <div class="img-box">
+              <img src="<?= $productImageDirectory; ?><?= getProductMainImage($product['product_uniqueID'], "image"); ?>" alt="Product Image" />
+            </div>
+            <div class="card-info-wrapper p-2">
+              <div class="text-center primary-gray p-2">
+                <h4><?php echo getProductData($product['product_uniqueID'], 'product_name'); ?></h4>
+                <h3><?php echo getProductData($product['product_uniqueID'], 'product_price'); ?> LKR</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php } ?>
+
+
+      </div>
+    </div>
+    <!-- Mens Section -->
+
+
+        <!-- Ladies Section -->
+        <?php
+$maxProducts = getMaxLatestProductLadies(8);
+?>
+    <div class="container p-3 mt-5 ladies-section text-center ">
+      <h3>Ladies Collection</h3>
+      <p>Move with Luxury</p>
+      <div class="row p-2">
+
+
+      <?php while ($product = mysqli_fetch_assoc($maxProducts)) { ?>
+        <div class="p-2 card-wrapper col-12 col-md-3 col-sm-3 col-lg-3">
+          <div class="card ">
+            <div class="img-box">
+              <img src="<?= $productImageDirectory; ?><?= getProductMainImage($product['product_uniqueID'], "image"); ?>" alt="Product Image" />
+            </div>
+            <div class="card-info-wrapper p-2">
+              <div class="text-center primary-gray p-2">
+                <h4><?php echo getProductData($product['product_uniqueID'], 'product_name'); ?></h4>
+                <h3><?php echo getProductData($product['product_uniqueID'], 'product_price'); ?> LKR</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php } ?>
+
+
+      </div>
+    </div>
+    <!-- Ladies Section -->
+
+
+
 
 
 
@@ -205,24 +270,24 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
   <script>
     var swiper = new Swiper(".swiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 2,
-      slideShadows: true
-    },
-    spaceBetween: 60,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    }
-  });
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true
+      },
+      spaceBetween: 60,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
+    });
   </script>
 
 

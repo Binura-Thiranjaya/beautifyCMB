@@ -55,7 +55,7 @@
       </div>
       <!-- Breadcrumb End -->
 
-      <?php if($page_category == "mens"){ ?>
+      <?php if($page_category == "GENTS"){ ?>
         <section class="home-slider3 ratio_40 p-0">
         <div class="banner">
           <div>
@@ -66,7 +66,7 @@
       <?php } ?>
 
 
-      <?php if($page_category == "ladies"){ ?>
+      <?php if($page_category == "LADIES"){ ?>
         <section class="home-slider3 ratio_40 p-0">
         <div class="banner">
           <div>
@@ -88,7 +88,7 @@
             <div class="col-lg-12 col-xl-12">
               <div class="row gy-5 g-lg-3 g-xxl-4">
                 <?php
-                if($page_category == "mens"){
+                if($page_category == "GENTS"){
                 ?>
                 <!-- <div class="col-12 order-2 order-lg-1">
                   <div class="round-wrap-content p-0 overflow-hidden">

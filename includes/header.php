@@ -16,7 +16,7 @@
     <!-- Overlay -->
     <a href="javascript:void(0)" class="overlay-general"></a>
     <!-- Header Start -->
-    <header class="header-common header3">
+    <header class="header-common header3 bg-white">
       <!-- Top Header -->
       <div class="top-header bg-theme-theme">
         <div class="container-lg">
@@ -26,12 +26,12 @@
         </div>
       </div>
 
-      <div class="container-lg">
+      <div class="container-lg ">
         <div class="nav-wrap">
           <!-- Navigation Start -->
-          <nav class="navigation">
+          <nav class="navigation ">
             <div class="nav-section">
-              <div class="header-section">
+              <div class="header-section ">
                 <div class="navbar navbar-expand-xl navbar-light navbar-sticky p-0">
                   <div class="d-flex logo-wraper">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu" aria-controls="primaryMenu">
@@ -180,8 +180,8 @@
                         </button>
 
                         <ul class="onhover-show-div">
-                          <li><a href="shop.php?cat=mens">Gents</a></li>
-                          <li><a href="shop.php?cat=ladies">Ladies</a></li>
+                          <li><a href="shop.php?cat=GENTS">Gents</a></li>
+                          <li><a href="shop.php?cat=LADIES">Ladies</a></li>
                         </ul>
                       </div>
                     </div>
@@ -201,12 +201,12 @@
 
                           <li class="nav-item">
                             <!-- <a class="nav-link" href="shop.php?cat=petceylon" >Mens</a> -->
-                            <a class="nav-link" href="shop.php?cat=mens" >Gents</a>
+                            <a class="nav-link" href="shop.php?cat=GENTS" >Gents</a>
 
                           </li>
 
                           <li class="nav-item">
-                          <a class="nav-link" href="shop.php?cat=ladies">Ladies</a>
+                          <a class="nav-link" href="shop.php?cat=LADIES">Ladies</a>
                             <!-- <a class="nav-link" href="shop.php?cat=secretsein">Ladies</a> -->
                           </li>
 

@@ -201,6 +201,61 @@ function getProductData($product, $data){
 }
 
 
+
+function getStock()
+{
+    $sql = mysqli_query(db(), 'SELECT * FROM `products`') or die(mysqli_error());
+    
+    if ($sql) {
+        $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+        return $result;
+    } else {
+        return null;
+    }
+}
+
+
+function getOrderHistory()
+{
+    $sql = mysqli_query(db(), 'SELECT * FROM `orders`') or die(mysqli_error());
+    
+    if ($sql) {
+        $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+        return $result;
+    } else {
+        return null;
+    }
+}
+
+
+function getPaymentHistory()
+{
+    $sql = mysqli_query(db(), 'SELECT * FROM `payments_history`') or die(mysqli_error());
+    
+    if ($sql) {
+        $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+        return $result;
+    } else {
+        return null;
+    }
+}
+
+
+function getFeedback()
+{
+    $sql = mysqli_query(db(), 'SELECT * FROM `comments`') or die(mysqli_error());
+    
+    if ($sql) {
+        $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+        return $result;
+    } else {
+        return null;
+    }
+}
+
+
+
+
 function getLatestProducts($limit) {
     $sql = 'SELECT * FROM `products` ORDER BY id DESC LIMIT ' . $limit;
     $data = db()->query($sql);
@@ -211,6 +266,42 @@ function getLatestProducts($limit) {
 
     return $data;
 }
+
+
+function getMaxLatestProductMens($limit) {
+    $sql = 'SELECT p.*, c.cat AS product_category
+            FROM products p
+            INNER JOIN categories c ON p.product_category = c.cat
+            WHERE p.product_category IN ("GENTS")
+            ORDER BY p.product_price DESC
+            LIMIT ' . $limit;
+
+    $data = db()->query($sql);
+
+    if ($data->num_rows == 0) {
+        return "N/A";
+    }
+
+    return $data;
+}
+
+function getMaxLatestProductLadies($limit) {
+    $sql = 'SELECT p.*, c.cat AS product_category
+            FROM products p
+            INNER JOIN categories c ON p.product_category = c.cat
+            WHERE p.product_category IN ("LADIES")
+            ORDER BY p.product_price DESC
+            LIMIT ' . $limit;
+
+    $data = db()->query($sql);
+
+    if ($data->num_rows == 0) {
+        return "N/A";
+    }
+
+    return $data;
+}
+
 
 
 function isUserExistFrom($data, $value){
