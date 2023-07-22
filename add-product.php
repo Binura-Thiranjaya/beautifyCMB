@@ -2,6 +2,7 @@
 <!-- Html start -->
 <html lang="en">
 <!-- Head Start -->
+<?php include __DIR__.'/includes/Admin_Session.php';?>
 
 <?php include __DIR__ . '/includes/head.php'; ?>
 

@@ -100,7 +100,14 @@
                                                                 <td><?php echo $productName; ?></td>
                                                                 <td><?php echo $unitPrice; ?></td>
                                                                 <td><?php echo $quantity; ?></td>
-                                                                <td><?php echo $availability; ?></td>
+                                                                <td> <?php
+                                                                        if($availability == 1){
+                                                                            echo "Published";
+                                                                        }else{
+                                                                            echo "Not Published";
+                                                                        }
+                                                                    ?>
+                                                                </td>
                                                               
                                                             </tr>
                                                         </div>

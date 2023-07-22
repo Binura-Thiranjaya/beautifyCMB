@@ -92,10 +92,16 @@
                         <div class="input-box">
                           <label for="product-category">Product Category</label>
                           <select class="form-control cat-drop" id="product-category" name="product-category" required>
-                          
-                           
-                          <option value="<?php echo $categoryId; ?>"><?php echo $categoryName; ?></option>
-                         
+                            <?php
+                                  if($categoryId == "GENTS"){
+
+                                    echo '<option value="1" selected>GENTS</option>';
+                                    echo '<option value="2">LADIES</option>';
+                                  }else{
+                                    echo '<option value="1">GENTS</option>';
+                                    echo '<option value="2" selected>LADIES</option>';
+                                  }
+                              ?>                         
                           </select>
                         </div>
                       </div>
@@ -146,8 +152,20 @@
 
                       <div class="col-6">
                         <div class="input-box">
-                          <label for="Availabilitye">Availability</label>
-                          <input class="form-control" id="Availability" name="Availability" type="text" value="<?php echo $availability; ?>" required>
+                          <label for="Availability">Availability</label>
+                          <?php
+                            if($availability == "1"){
+                                echo '<input type="radio" id="Availability" name="Availability" value="1" checked>'."Published";
+                                echo '<br>';
+                                echo '<input type="radio" id="Availability" name="Availability" value="0">'."Not Published";
+                            }else{
+                                echo '<input type="radio" id="Availability" name="Availability" value="1">'."Published";
+                                echo '<br>';
+                                echo '<input type="radio" id="Availability" name="Availability" value="0" checked>'."Not Published";
+                            }
+                              ?>
+
+                          <!-- <input class="form-control" id="Availability" name="Availability" type="text" value="<?php echo $availability; ?>" required> -->
                         </div>
                       </div>
 

@@ -83,6 +83,7 @@
                                                         $unitPrice = $row['product_price'];
                                                         $quantity = $row['product_stock'];
                                                         $description = $row['product_description'];
+                                                        $availability = $row['availability'];
                                                         $image = getProductMainImage($uniqueID, 'image');
 
 
@@ -103,7 +104,15 @@
                                                                 <td><img src="<?= $productImageDirectory; ?><?php echo $image; ?>" alt="Product Image" class="w-100 "></td>
 
 
-                                                                <td>1</td>
+                                                                <td>
+                                                                    <?php
+                                                                        if($availability == 1){
+                                                                            echo "Published";
+                                                                        }else{
+                                                                            echo "Not Published";
+                                                                        }
+                                                                    ?>
+                                                                </td>
                                                                 <td>
                                                                     <a href="edit-product.php?id=<?php echo $uniqueID; ?>" class="btn btn-primary">Edit</a>
                                                                    

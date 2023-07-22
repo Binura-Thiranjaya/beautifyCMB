@@ -2,7 +2,9 @@
 <!-- Html start -->
 <html lang="en">
   <!-- Head Start -->
-  
+  <!--- SESSION --->
+<?php include __DIR__.'/includes/Admin_Session.php';?>
+  <!--END SESSION -->
   <?php include __DIR__.'/includes/head.php';?>
 
   <!-- Body Start -->

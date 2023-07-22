@@ -74,7 +74,9 @@ if(isset($_POST['login'])){
 
   //Validate user
   $sql = "SELECT * FROM users WHERE user_Email = '$username'";
+  $adminSQL = "SELECT * FROM `admin` WHERE admin_Email = '$username'";
   $result = $conn->query($sql);
+   $adminResult = $conn->query($adminSQL);
 
   if ($result->num_rows > 0) {
       $row = $result->fetch_assoc();
@@ -86,7 +88,18 @@ if(isset($_POST['login'])){
       } else {
         redirect('login.php?u='.$username.'&code=14');
       }
-  } else {
+  }else if ($adminResult->num_rows > 0) {
+      $row = $adminResult->fetch_assoc();
+      if ($password == $row['admin_Password']) {
+         $adminID = $row['admin_uniqueID'];
+         $_SESSION['logged_in'] = true;
+         $_SESSION['admin_id'] = $adminID;
+        redirect('admin-dashboard.php?code=15');
+      } else {
+        redirect('login.php?u='.$username.'&code=14');
+      }
+   }
+   else {
       redirect('login.php?code=13');
   }
   die();
