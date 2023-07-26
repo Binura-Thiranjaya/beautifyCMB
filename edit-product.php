@@ -94,7 +94,7 @@
                           <select class="form-control cat-drop" id="product-category" name="product-category" required>
                           
                            
-                          <option value="<?php echo $categoryId; ?>"><?php echo $categoryName; ?></option>
+                          <option value="<?php echo $categoryId; ?>"><?php echo $categoryId; ?></option>
                          
                           </select>
                         </div>
