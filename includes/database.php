@@ -135,7 +135,7 @@ function jslog($log){
 }
 
 function getProducts($cat){
-    $sql = 'SELECT * FROM `products` WHERE product_category = "'.$cat.'" ' ;
+    $sql = 'SELECT * FROM `products` WHERE product_category = "'.$cat.'" AND  availability = 1 ' ;
     $data = db()->query($sql);
 
     if($data->num_rows == 0){
@@ -146,7 +146,7 @@ function getProducts($cat){
 }
 
 function getProductImages($product){
-    $sql = 'SELECT * FROM `product_images` WHERE product_uniqueID = "'.$product.'" ORDER BY img_id ASC LIMIT 1,18446744073709551615' ;
+    $sql = 'SELECT * FROM `product_images` WHERE product_uniqueID = "'.$product.'" AND availability = 1 ORDER BY img_id ASC LIMIT 1,18446744073709551615' ;
     $data = db()->query($sql);
 
     if($data->num_rows == 0){
@@ -157,7 +157,7 @@ function getProductImages($product){
 }
 
 function getProductAllImages($product){
-    $sql = 'SELECT * FROM `product_images` WHERE product_uniqueID = "'.$product.'" ORDER BY img_id ASC' ;
+    $sql = 'SELECT * FROM `product_images` WHERE product_uniqueID = "'.$product.'" AND availability = 1 ORDER BY img_id ASC' ;
     $data = db()->query($sql);
 
     if($data->num_rows == 0){
@@ -168,7 +168,8 @@ function getProductAllImages($product){
 }
 
 function getProductMainImage($product, $data){
-    $sql = mysqli_query(db(), 'SELECT * FROM `product_images` WHERE product_uniqueID = "'.$product.'" ORDER BY img_id ASC LIMIT 1') or die(mysqli_error());
+    //$query = "SELECT product_images.product_uniqueID, product_images.image, products.availability FROM product_images INNER"Z JOIN products ON product_images.id=products.id;";
+    $sql = mysqli_query(db(), 'SELECT * FROM `product_images` WHERE product_uniqueID = "'.$product.'"   ORDER BY img_id ASC LIMIT 1') or die(mysqli_error());
     $result = mysqli_fetch_array($sql);
     $count = mysqli_num_rows($sql);
     $return = $result[$data];
@@ -193,7 +194,7 @@ function isProductExist($product){
 }
 
 function getProductData($product, $data){
-    $sql = mysqli_query(db(), 'SELECT * FROM `products` where product_uniqueID = "'.$product.'" ') or die(mysqli_error());
+    $sql = mysqli_query(db(), 'SELECT * FROM `products` where product_uniqueID = "'.$product.'" AND availability = "1" ') or die(mysqli_error());
     $result = mysqli_fetch_array($sql);
     $return = $result[$data];
 
@@ -257,7 +258,7 @@ function getFeedback()
 
 
 function getLatestProducts($limit) {
-    $sql = 'SELECT * FROM `products` ORDER BY id DESC LIMIT ' . $limit;
+    $sql = 'SELECT * FROM `products` WHERE availability = "1" ORDER BY id DESC LIMIT ' . $limit;
     $data = db()->query($sql);
 
     if ($data->num_rows == 0) {
@@ -272,7 +273,7 @@ function getMaxLatestProductMens($limit) {
     $sql = 'SELECT p.*, c.cat AS product_category
             FROM products p
             INNER JOIN categories c ON p.product_category = c.cat
-            WHERE p.product_category IN ("GENTS")
+            WHERE p.product_category IN ("GENTS") AND p.availability = "1"
             ORDER BY p.product_price DESC
             LIMIT ' . $limit;
 
@@ -289,7 +290,7 @@ function getMaxLatestProductLadies($limit) {
     $sql = 'SELECT p.*, c.cat AS product_category
             FROM products p
             INNER JOIN categories c ON p.product_category = c.cat
-            WHERE p.product_category IN ("LADIES")
+            WHERE p.product_category IN ("LADIES") AND p.availability = "1"
             ORDER BY p.product_price DESC
             LIMIT ' . $limit;
 

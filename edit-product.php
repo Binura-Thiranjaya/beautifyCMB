@@ -57,10 +57,9 @@
                   <?php
                         // Retrieve the unique ID from the URL parameter
                         $uniqueID = $_GET['id'];
-
                         // Fetch the product details from the database based on the unique ID
-                        $sql = mysqli_query(db(), 'SELECT * FROM `products` WHERE product_uniqueID = "'.$uniqueID.'"') or die(mysqli_error());
-                        $sqlImage = mysqli_query(db(), 'SELECT * FROM `product_images` WHERE product_uniqueID = "'.$uniqueID.'"') or die(mysqli_error());
+                        $sql = mysqli_query(db(), 'SELECT * FROM `products` WHERE product_uniqueID = "'.$uniqueID.'"') or die(mysqli_error(db()));
+                        $sqlImage = mysqli_query(db(), 'SELECT * FROM `product_images` WHERE product_uniqueID = "'.$uniqueID.'"') or die(mysqli_error(db()));
                         $Image = mysqli_fetch_assoc($sqlImage);
 
                         $product = mysqli_fetch_assoc($sql);
@@ -101,11 +100,11 @@
                             <?php
                                   if($categoryId == "GENTS"){
 
-                                    echo '<option value="1" selected>GENTS</option>';
-                                    echo '<option value="2">LADIES</option>';
+                                    echo '<option value="GENTS" selected>GENTS</option>';
+                                    echo '<option value="LADIES">LADIES</option>';
                                   }else{
-                                    echo '<option value="1">GENTS</option>';
-                                    echo '<option value="2" selected>LADIES</option>';
+                                    echo '<option value="GENTS">GENTS</option>';
+                                    echo '<option value="LADIES" selected>LADIES</option>';
                                   }
                               ?>                         
                           </select>
@@ -214,9 +213,7 @@
 
         // //insert into database
         $sql1 = "UPDATE `products` SET `product_uniqueID`='$UID',`product_category`='$product_category',`product_name`='$product_name',`product_price`='$unitPrice',`product_description`='$product_description',`product_stock`='$quantity',`availability`='$availability' WHERE product_uniqueID = '$uniqueID'";
-        echo $sql1;
-        $sql2 = "UPDATE `product_images` SET `product_uniqueID`='$UID',`image`='$image' WHERE  product_uniqueID = '$uniqueID'";
-        echo $sql2;
+        $sql2 = "UPDATE `product_images` SET `product_uniqueID`='$UID',`image`='$image',`availability`='$availability' WHERE  product_uniqueID = '$uniqueID'";
         if (mysqli_query($conn, $sql1) && mysqli_query($conn, $sql2)) {
             echo '<script>alert("Product edited successfully")</script>';
             echo '<script>window.location.href = "manage-product.php";</script>';

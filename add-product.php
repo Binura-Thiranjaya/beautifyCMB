@@ -147,7 +147,7 @@
             $quantity = post('quantity');
             $UID =  post('UID');
             $product_description =  post('product_description');
-
+            $availability = 1;
             //convert image to base64
             if ($_FILES['product_image']['tmp_name']) {
                 $image = base64_encode(file_get_contents($_FILES['product_image']['tmp_name']));
@@ -156,8 +156,8 @@
             }
 
             //insert into database
-            $sql1 = "INSERT INTO `products`(`product_uniqueID`, `product_category`, `product_name`, `product_price`, `product_description`, `product_stock`, `availability`) VALUES ('$UID','$product_category','$product_name','$unit_price','$product_description','$quantity','1')";
-            $sql2 = "INSERT INTO `product_images`(`product_uniqueID`, `image`) VALUES ('$UID','$image')";
+            $sql1 = "INSERT INTO `products`(`product_uniqueID`, `product_category`, `product_name`, `product_price`, `product_description`, `product_stock`, `availability`) VALUES ('$UID','$product_category','$product_name','$unit_price','$product_description','$quantity','$availability')";
+            $sql2 = "INSERT INTO `product_images`(`product_uniqueID`, `image`,`availability`) VALUES ('$UID','$image','$availability')";
             if (mysqli_query($conn, $sql1) && mysqli_query($conn, $sql2)) {
                 echo '<script>alert("Product added successfully")</script>';
 
