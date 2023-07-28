@@ -53,13 +53,16 @@
                     <h3>Edit product Details</h3>
                   </div>
 
-                  <form action="add-product.php" method="POST" class="custom-form form-pill">
+                  <form action='edit-product.php?id=<?php echo $_GET['id']; ?>' method="POST" class="custom-form form-pill">
                   <?php
                         // Retrieve the unique ID from the URL parameter
                         $uniqueID = $_GET['id'];
 
                         // Fetch the product details from the database based on the unique ID
                         $sql = mysqli_query(db(), 'SELECT * FROM `products` WHERE product_uniqueID = "'.$uniqueID.'"') or die(mysqli_error());
+                        $sqlImage = mysqli_query(db(), 'SELECT * FROM `product_images` WHERE product_uniqueID = "'.$uniqueID.'"') or die(mysqli_error());
+                        $Image = mysqli_fetch_assoc($sqlImage);
+
                         $product = mysqli_fetch_assoc($sql);
 
                         // Populate the form fields with the retrieved values
@@ -71,6 +74,9 @@
                           $UID = $product['product_uniqueID'];
                           $description = $product['product_description'];
                           $availability = $product['availability'];
+
+                          $Image = $Image['image'];
+                          
 
                           // Set the selected option in the category dropdown
                           // echo '<script>document.getElementById("product-category").value = "'.$categoryId.'";</script>';
@@ -146,7 +152,7 @@
                       <div class="col-6">
                         <div class="input-box">
                           <label for="product-image">Choose Product Image</label>
-                          <input class="form-control" id="product-image" name="product-image" type="file" value="" required>
+                          <input class="form-control" id="product-image" name="product-image" type="file" value="">
                         </div>
                       </div>
 
@@ -174,16 +180,12 @@
 
                     <div class="btn-box">
                       <a href="" class="btn-outline btn-sm">Cancel</a>
-                      <button type="submit" name="updateAddress" value="true" class="btn-solid btn-sm">Update <i class="arrow"></i></button>
+                      <button type="submit" name="updateProduct" value="true" class="btn-solid btn-sm">Update <i class="arrow"></i></button>
                     </div>
                   </form>
+                  
                 </div>
               </div>
-
- 
-
-
-
               <!-- My Dashboard End -->
 
             </div>
@@ -191,6 +193,38 @@
         </div>
       </div>
     </section>
+    <?php
+    // session_start();
+      if (isset($_POST['updateProduct'])) {
+        $uniqueID = $_GET['id'];
+        $product_category = post('product-category');
+        $product_name = post('product-name');
+        $unit_price = post('unit-price');
+        $quantity = post('quantity');
+        $UID =  post('UID');
+        $product_description =  post('product-description');
+        $availability = post('Availability');
+
+        // //convert image to base64
+        if ($_FILES['product_image']['tmp_name']) {
+            $image = base64_encode(file_get_contents($_FILES['product_image']['tmp_name']));
+        }else{
+            $image = $Image;
+        } 
+
+        // //insert into database
+        $sql1 = "UPDATE `products` SET `product_uniqueID`='$UID',`product_category`='$product_category',`product_name`='$product_name',`product_price`='$unitPrice',`product_description`='$product_description',`product_stock`='$quantity',`availability`='$availability' WHERE product_uniqueID = '$uniqueID'";
+        echo $sql1;
+        $sql2 = "UPDATE `product_images` SET `product_uniqueID`='$UID',`image`='$image' WHERE  product_uniqueID = '$uniqueID'";
+        echo $sql2;
+        if (mysqli_query($conn, $sql1) && mysqli_query($conn, $sql2)) {
+            echo '<script>alert("Product edited successfully")</script>';
+            echo '<script>window.location.href = "manage-product.php";</script>';
+        } else {
+            echo '<script>alert("Product edited failed")</script>';
+        }
+    }
+    ?>
     <!-- Dashboard End -->
   </main>
   <!-- Main End -->
