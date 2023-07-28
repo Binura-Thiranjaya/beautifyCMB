@@ -29,7 +29,7 @@ Configurations
 date_default_timezone_set('Asia/Colombo');
 $loader = "BeautifyCMB";
 $productImageDirectory = "data:image/png;base64,";
-
+$URL = "http://localhost/beautifycmb1/";
 
 //Functions
 
@@ -622,13 +622,14 @@ function payForOrder($user_mobile, $user_email, $user_firstName, $user_lastName,
     $username = username();
     // set POST variables
     $url = 'https://sandbox.payhere.lk/pay/checkout'; // payment gateway URL
+    $root_url = 'http://localhost/beautifycmb1/';//Test
     $fields = array(
         'merchant_id' => '1220939', // Replace your Merchant ID
-        'return_url' => 'http://112.135.216.36/NGA/my-paymentStatus.php',
-        'cancel_url' => 'http://112.135.216.36/NGA/my-paymentStatus.php?cancel=true',
-        'notify_url' => 'http://112.135.216.36/NGA/my-paymentUpdate.php',
+        'return_url' => $root_url.'my-paymentStatus.php',
+        'cancel_url' => $root_url.'my-paymentStatus.php?cancel=true',
+        'notify_url' => $root_url.'/my-paymentUpdate.php',
         'order_id' => $order,
-        'items' => 'NGA Neutrons',
+        'items' => 'BeautifyCMB',
         'currency' => 'LKR',
         'amount' => $orderTotal,
         'first_name' => $user_firstName,

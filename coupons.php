@@ -53,11 +53,8 @@
                                         <h3>Add Coupons and Discounts</h3>
                                     </div>
 
-                                    <form action="add-product.php" method="POST" class="custom-form form-pill">
-
+                                    <form action="coupons.php" method="POST" class="custom-form form-pill">
                                         <div class="row g-3 g-xl-4">
-                                            
-
                                             <div class="col-4">
                                                 <div class="input-box">
                                                     <label for="coupon-code">Coupon Code</label>
@@ -90,7 +87,7 @@
                                             <div class="col-4">
                                                 <div class="input-box">
                                                     <label for="expired">Expired on</label>
-                                                    <input class="form-control" id="expired" name="expired" type="text" value="" required>
+                                                    <input class="form-control" id="expired" name="expired" type="date" value="" required>
                                                 </div>
                                             </div>
 
@@ -99,7 +96,7 @@
 
                                         <div class="btn-box">
                                             <a href="" class="btn-outline btn-sm">Cancel</a>
-                                            <button type="submit" name="updateAddress" value="true" class="btn-solid btn-sm">Add Coupon <i class="arrow"></i></button>
+                                            <button type="submit" name="addCoupon" value="true" class="btn-solid btn-sm">Add Coupon <i class="arrow"></i></button>
                                         </div>
                                     </form>
                                 </div>
@@ -112,6 +109,43 @@
                 </div>
             </div>
         </section>
+        <?php
+        if(isset($_POST['addCoupon'])){
+            //ALERT
+           $coupon_code = post('coupon-code');
+           $coupon_type = post('coupon-type');
+           $coupon_cat = "ALL";
+           $coupon_value = post('coupon-value');
+           $isTemp = 10;
+           $attempts = post('attempts');
+           $expired = post('expired');
+
+           $sql = "INSERT INTO `coupons`(`coupon_code`, `coupon_type`,`coupon_cat`, `coupon_value`,`isTemp`, `attempts`, `expired`) VALUES ('$coupon_code','$coupon_type','$coupon_cat','$coupon_value','$isTemp','$attempts','$expired')";
+           if (mysqli_query($conn, $sql)) {
+            echo '<script>alert("Coupon added successfully")</script>';
+
+            // echo "<script>Swal.fire({
+            //     icon: 'success',
+            //     title: 'Coupon added successfully',
+            //     showConfirmButton: false,
+            //     timer: 1500
+            //   })</script>";
+        } else {
+            echo '<script>alert("Coupon adding failed")</script>';
+
+            // echo "<script>Swal.fire({
+            //     icon: 'error',
+            //     title: 'Product adding failed',
+            //     showConfirmButton: false,
+            //     timer: 1500
+            //   })</script>";
+        }
+
+        }
+
+
+        
+        ?>
         <!-- Dashboard End -->
     </main>
     <!-- Main End -->

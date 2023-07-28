@@ -158,21 +158,24 @@
             //insert into database
             $sql1 = "INSERT INTO `products`(`product_uniqueID`, `product_category`, `product_name`, `product_price`, `product_description`, `product_stock`, `availability`) VALUES ('$UID','$product_category','$product_name','$unit_price','$product_description','$quantity','1')";
             $sql2 = "INSERT INTO `product_images`(`product_uniqueID`, `image`) VALUES ('$UID','$image')";
-            echo $sql2;
             if (mysqli_query($conn, $sql1) && mysqli_query($conn, $sql2)) {
-                echo "<script>Swal.fire({
-                    icon: 'success',
-                    title: 'Product added successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })</script>";
+                echo '<script>alert("Product added successfully")</script>';
+
+                // echo "<script>Swal.fire({
+                //     icon: 'success',
+                //     title: 'Product added successfully',
+                //     showConfirmButton: false,
+                //     timer: 1500
+                //   })</script>";
             } else {
-                echo "<script>Swal.fire({
-                    icon: 'error',
-                    title: 'Product adding failed',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })</script>";
+                echo '<script>alert("Product adding failed")</script>';
+
+                // echo "<script>Swal.fire({
+                //     icon: 'error',
+                //     title: 'Product adding failed',
+                //     showConfirmButton: false,
+                //     timer: 1500
+                //   })</script>";
             }
         }
         ?>

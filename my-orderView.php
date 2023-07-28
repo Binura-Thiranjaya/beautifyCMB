@@ -244,10 +244,10 @@
                             <div class="col-lg-6">
                               <h3 class="h6">Senders address</h3>
                               <address>
-                                <strong>NGA Neutron</strong><br>
-                                51/6/2/1, Sri bodhirukkarama Road<br>
-                                Wellawatte, Colombo 06<br>
-                                <abbr title="Phone">P:</abbr> (077) 2900 432
+                                <strong>BeautifyCMB</strong><br>
+                                No 165/1, New Kandy Road<br>
+                                Kadawatha, Sri Lanka<br>
+                                <abbr title="Phone">P:</abbr> (071) 998 2906
                               </address>
                             </div>
                           </div>
