@@ -53,11 +53,11 @@
                                         <h3>Customer Feedback</h3>
                                     </div>
                                         <div class="col-12 p-2 w-100">
-                                                <input type="text" name="seach" placeholder="search" id="" class="p-2 w-100">
+                                                <input type="text" name="search" placeholder="search" id="" onkeyup="searchFunction()" class="p-2 w-100">
                                         </div>
                                     <form action="manage-product.php" method="POST" class="custom-form form-pill ">
                                         <div class="table-responsive ">
-                                            <table class="table table-bordered ">
+                                            <table class="table table-bordered " id="customerTable">
                                                 <thead>
 
 
@@ -123,6 +123,26 @@
 
 
 </body>
+<script>
+function searchFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("customerTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
 <!-- Body End -->
 
 </html>

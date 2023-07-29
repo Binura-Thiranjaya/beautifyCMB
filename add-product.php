@@ -2,6 +2,7 @@
 <!-- Html start -->
 <html lang="en">
 <!-- Head Start -->
+<?php include __DIR__.'/includes/Admin_Session.php';?>
 
 <?php include __DIR__ . '/includes/head.php'; ?>
 
@@ -52,79 +53,80 @@
                                     <div class="title-box3">
                                         <h3>Add product Details</h3>
                                     </div>
+                                    <div class="custom-form form-pill">
+                                        <form action="add-product.php" method="POST" enctype="multipart/form-data">
 
-                                    <form action="add-product.php" method="POST" class="custom-form form-pill">
-
-                                        <div class="row g-3 g-xl-4">
-                                            <div class="col-sm-6">
-                                                <div class="input-box">
-                                                    <label for="product-category">Product Category</label>
-                                                    <select class="form-control cat-drop" id="product-category" name="product-category" required>
-                                                        <?php
-                                                        // Fetch categories from the database
-                                                        $categories = categories();
-                                                        while ($row = mysqli_fetch_assoc($categories)) {
-                                                            $categoryId = $row['cat'];
-                                                            $categoryName = $row['cat_name'];
-                                                        ?>
-                                                            <option value="<?php echo $categoryId; ?>"><?php echo $categoryName; ?></option>
-                                                        <?php } ?>
-                                                    </select>
+                                            <div class="row g-3 g-xl-4">
+                                                <div class="col-sm-6">
+                                                    <div class="input-box">
+                                                        <label for="product-category">Product Category</label>
+                                                        <select class="form-control cat-drop" id="product-category" name="product_category" required>
+                                                            <?php
+                                                            // Fetch categories from the database
+                                                            $categories = categories();
+                                                            while ($row = mysqli_fetch_assoc($categories)) {
+                                                                $categoryId = $row['cat'];
+                                                                $categoryName = $row['cat_name'];
+                                                            ?>
+                                                                <option value="<?php echo $categoryId; ?>"><?php echo $categoryName; ?></option>
+                                                            <?php } ?>
+                                                        </select>
+                                                    </div>
                                                 </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="input-box">
+                                                        <label for="product-name">Product Name</label>
+                                                        <input class="form-control" id="product-name" name="product_name" type="text" value="" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <div class="input-box">
+                                                        <label for="unit-price">Unit Price</label>
+                                                        <input class="form-control" id="unit-price" name="unit_price" type="text" value="" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <div class="input-box">
+                                                        <label for="quantity">Quantity</label>
+                                                        <input class="form-control" id="quantity" name="quantity" type="text" value="" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <div class="input-box">
+                                                        <label for="UID">Unique ID</label>
+                                                        <input class="form-control" id="UID" name="UID" type="text" value="" placeholder="Enter the product barcode number here" required>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="col-12">
+                                                    <div class="input-box">
+                                                        <label for="product-description">Product Description</label>
+                                                        <input class="form-control" id="product-description" name="product_description" type="text" value="" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="input-box">
+                                                        <label for="product-image">Choose Product Image</label>
+                                                        <input class="form-control" id="product-image" name="product_image" type="file" value="" required>
+                                                    </div>
+                                                </div>
+
+
                                             </div>
 
-                                            <div class="col-sm-6">
-                                                <div class="input-box">
-                                                    <label for="product-name">Product Name</label>
-                                                    <input class="form-control" id="product-name" name="product-name" type="text" value="" required>
-                                                </div>
+                                            <div class="btn-box">
+                                                <a href="" class="btn-outline btn-sm">Cancel</a>
+                                                <button type="submit" name="add_Product" value="true" class="btn-solid btn-sm">Add Product <i class="arrow"></i></button>
                                             </div>
-
-                                            <div class="col-sm-4">
-                                                <div class="input-box">
-                                                    <label for="unit-price">Unit Price</label>
-                                                    <input class="form-control" id="unit-price" name="unit-price" type="text" value="" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-4">
-                                                <div class="input-box">
-                                                    <label for="quantity">Quantity</label>
-                                                    <input class="form-control" id="quantity" name="quantity" type="text" value="" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-4">
-                                                <div class="input-box">
-                                                    <label for="UID">Unique ID</label>
-                                                    <input class="form-control" id="UID" name="UID" type="text" value="" placeholder="Enter the product barcode number here" required>
-                                                </div>
-                                            </div>
-
-
-
-                                            <div class="col-12">
-                                                <div class="input-box">
-                                                    <label for="product-description">Product Description</label>
-                                                    <input class="form-control" id="product-description" name="product-description" type="text" value="" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="input-box">
-                                                    <label for="product-image">Choose Product Image</label>
-                                                    <input class="form-control" id="product-image" name="product-image" type="file" value="" required>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                        <div class="btn-box">
-                                            <a href="" class="btn-outline btn-sm">Cancel</a>
-                                            <button type="submit" name="updateAddress" value="true" class="btn-solid btn-sm">Add Product <i class="arrow"></i></button>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
 
@@ -134,7 +136,49 @@
                     </div>
                 </div>
             </div>
+
         </section>
+        <?php
+        if (isset($_POST['add_Product'])) {
+            //alert
+            $product_category = post('product_category');
+            $product_name = post('product_name');
+            $unit_price = post('unit_price');
+            $quantity = post('quantity');
+            $UID =  post('UID');
+            $product_description =  post('product_description');
+            $availability = 1;
+            //convert image to base64
+            if ($_FILES['product_image']['tmp_name']) {
+                $image = base64_encode(file_get_contents($_FILES['product_image']['tmp_name']));
+            } else {
+                $image = "No Image";
+            }
+
+            //insert into database
+            $sql1 = "INSERT INTO `products`(`product_uniqueID`, `product_category`, `product_name`, `product_price`, `product_description`, `product_stock`, `availability`) VALUES ('$UID','$product_category','$product_name','$unit_price','$product_description','$quantity','$availability')";
+            $sql2 = "INSERT INTO `product_images`(`product_uniqueID`, `image`,`availability`) VALUES ('$UID','$image','$availability')";
+            if (mysqli_query($conn, $sql1) && mysqli_query($conn, $sql2)) {
+                echo '<script>alert("Product added successfully")</script>';
+
+                // echo "<script>Swal.fire({
+                //     icon: 'success',
+                //     title: 'Product added successfully',
+                //     showConfirmButton: false,
+                //     timer: 1500
+                //   })</script>";
+            } else {
+                echo '<script>alert("Product adding failed")</script>';
+
+                // echo "<script>Swal.fire({
+                //     icon: 'error',
+                //     title: 'Product adding failed',
+                //     showConfirmButton: false,
+                //     timer: 1500
+                //   })</script>";
+            }
+        }
+        ?>
         <!-- Dashboard End -->
     </main>
     <!-- Main End -->
@@ -146,6 +190,7 @@
     <?php include __DIR__ . '/includes/js.php'; ?>
 
 </body>
+
 <!-- Body End -->
 
 </html>
