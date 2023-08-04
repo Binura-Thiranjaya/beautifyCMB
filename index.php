@@ -260,6 +260,8 @@ $maxProducts = getMaxLatestProductLadies(8);
 
 
   </main>
+  <!--Chatbot-->
+
   <!-- Main End -->
 
   <?php include __DIR__ . '/includes/footer.php'; ?>

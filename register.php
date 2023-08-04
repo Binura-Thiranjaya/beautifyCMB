@@ -156,7 +156,7 @@ if(isset($_POST['register'])){
          <section class="pb-0">
             <div class="container-lg">
                <div class="title-box">
-                  <h2 class="unique-heading">Create your NGA Account</h2>
+                  <h2 class="unique-heading">Create your BeautifyCMB Account</h2>
                   <span class="title-divider1"><span class="squre"></span><span class="squre"></span></span>
                </div>
                <div class="button-card-wrapper">

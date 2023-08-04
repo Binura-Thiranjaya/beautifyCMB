@@ -137,7 +137,7 @@ if(isset($_POST['login'])){
          <section class="pb-0">
             <div class="container-lg">
                <div class="title-box">
-                  <h2 class="unique-heading">Login to your NGA Account</h2>
+                  <h2 class="unique-heading">Login to your BeautifyCMB Account</h2>
                   <span class="title-divider1"><span class="squre"></span><span class="squre"></span></span>
                </div>
                <div class="button-card-wrapper">
