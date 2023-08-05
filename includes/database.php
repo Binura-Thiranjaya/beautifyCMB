@@ -628,7 +628,7 @@ function payForOrder($user_mobile, $user_email, $user_firstName, $user_lastName,
         'merchant_id' => '1220939', // Replace your Merchant ID
         'return_url' => $root_url.'my-paymentStatus.php',
         'cancel_url' => $root_url.'my-paymentStatus.php?cancel=true',
-        'notify_url' => $root_url.'/my-paymentUpdate.php',
+        'notify_url' => $root_url.'my-paymentUpdate.php',
         'order_id' => $order,
         'items' => 'BeautifyCMB',
         'currency' => 'LKR',

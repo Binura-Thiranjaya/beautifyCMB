@@ -42,14 +42,14 @@
               <div class="align-ment">
                 <div class="contenten-wrap">
                   <div class="content-box">
-                    <h5>Welcome to NGA NEUTRON</h5>
+                    <h5>Welcome to BeautifyCMB NEUTRON</h5>
                     <h4>Best in pharmaceutical and veterinary products </h4>
 
                     <p>
-                    Welcome to NGA Neutron, your one-stop-shop for pharmaceutical and veterinary products. 
+                    Welcome to BeautifyCMB Neutron, your one-stop-shop for pharmaceutical and veterinary products. 
                     We are dedicated to providing high-quality products that meet the needs of our customers. 
-                    <br><br>Our extensive range of products includes veterinary shampoos, anti-fungal and antimicrobial solutions, anti-inflammatories, cosmetics, surgical items, bleach, and hygiene products. Our team is made up of experienced professionals who are committed to ensuring that every product we offer meets the highest standards of quality and safety. We pride ourselves on our excellent customer service and strive to make every interaction with our customers a positive experience. 
-                    <br><br>Thank you for choosing NGA Neutron, and we look forward to serving you!
+                    <br><br>Our extensive range of products includes veterinary shampoos, anti-fuBeautifyCMBl and antimicrobial solutions, anti-inflammatories, cosmetics, surgical items, bleach, and hygiene products. Our team is made up of experienced professionals who are committed to ensuring that every product we offer meets the highest standards of quality and safety. We pride ourselves on our excellent customer service and strive to make every interaction with our customers a positive experience. 
+                    <br><br>Thank you for choosing BeautifyCMB Neutron, and we look forward to serving you!
                     </p>
                   </div>
                 </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="col-lg-5 order-1 order-lg-2">
               <div class="img-box">
-                <img class="img-fluid" src="http://localhost/NGA/assets/images/logos/logo.png" alt="Group  Photo" />
+                <img class="img-fluid" src="http://localhost/BeautifyCMB/assets/images/logos/logo.png" alt="Group  Photo" />
               </div>
             </div>
           </div>
@@ -215,7 +215,7 @@
                   </span>
                   <div class="media-body">
                     <h5>We Provide Free Shipping</h5>
-                    <span>At NGA Neutron, we believe that our customers should never have to pay extra for shipping. That's why we offer free shipping on all orders, with delivery within 4 to 5 days right to your doorstep.</span>
+                    <span>At BeautifyCMB Neutron, we believe that our customers should never have to pay extra for shipping. That's why we offer free shipping on all orders, with delivery within 4 to 5 days right to your doorstep.</span>
                   </div>
                 </div>
               </div>
@@ -231,7 +231,7 @@
                   </span>
                   <div class="media-body">
                     <h5>We Provide 10 Days Replacement Guarantee</h5>
-                    <span>At NGA Neutron, we stand behind the quality of our products. That's why we offer a 10-day replacement guarantee on all products purchased from our website. Please note that this guarantee does not cover physical damage or replacement of a product with an old one.</span>
+                    <span>At BeautifyCMB Neutron, we stand behind the quality of our products. That's why we offer a 10-day replacement guarantee on all products purchased from our website. Please note that this guarantee does not cover physical damage or replacement of a product with an old one.</span>
                   </div>
                 </div>
               </div>
@@ -247,7 +247,7 @@
                   </span>
                   <div class="media-body">
                     <h5>We Provide High Security Payment Method</h5>
-                    <span>At NGA Neutron, we take the security of our customers' information seriously. That's why we use high-level security payment methods to ensure that your personal and financial information is always protected. Our firewalls are impenetrable, so you can shop with confidence.</span>
+                    <span>At BeautifyCMB Neutron, we take the security of our customers' information seriously. That's why we use high-level security payment methods to ensure that your personal and financial information is always protected. Our firewalls are impenetrable, so you can shop with confidence.</span>
                   </div>
                 </div>
               </div>
@@ -263,7 +263,7 @@
                   </span>
                   <div class="media-body">
                     <h5>We Have Over 10,000 Styles</h5>
-                    <span>At NGA Neutron, we offer an extensive selection of products in a wide range of categories, including pharmaceutical and veterinary products, cosmetics, surgical items, bleach, and hygiene products. With over 10,000 unique styles to choose from, you're sure to find the products you need at prices you can afford.</span>
+                    <span>At BeautifyCMB Neutron, we offer an extensive selection of products in a wide range of categories, including pharmaceutical and veterinary products, cosmetics, surgical items, bleach, and hygiene products. With over 10,000 unique styles to choose from, you're sure to find the products you need at prices you can afford.</span>
                   </div>
                 </div>
               </div>
