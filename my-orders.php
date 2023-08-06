@@ -101,7 +101,8 @@
                           <td><?=getPaymentStatusOrder($orderID);?></td>
                           <td><?=$order['order_on'];?></td>
                           <td>Rs.<?=$order['order_totalAmount'];?>.00</td>
-                          <td><a href="my-orderView.php?order=<?=$orderID;?>" class="btn-solid checkout-btn btn-outline w-100 justify-content-center checkout-btn"> View </a></td>
+                          <td>
+                            <a href="my-orderView.php?order=<?=$orderID;?>" class="btn-solid checkout-btn btn-outline w-100 justify-content-center checkout-btn"> View </a></td>
                         </tr>
                         <?php } ?>
                       
