@@ -656,6 +656,10 @@ button:focus {
     width: 4px
 }
 
+
+.profie{
+    z-index: 30px !important;
+}
 .custom-scroll::-webkit-scrollbar-thumb {
     background-color: rgba(38, 40, 52, 0.2)
 }
